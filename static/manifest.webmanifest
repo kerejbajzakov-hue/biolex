@@ -1,0 +1,9 @@
+{
+  "name": "BioLex — Biology Dictionary",
+  "short_name": "BioLex",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ECE9F3",
+  "theme_color": "#6600FF",
+  "icons": [{ "src": "/img/logo.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
