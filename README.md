@@ -94,6 +94,16 @@ Minimal term entry:
 Optional fields: `definition`, `pronunciation`, `grammar`, `etymology` (each `{en, kk, ru}`),
 `facts` (`{"en": ["…"], …}`) and `related` (list of slugs).
 
+## Website on GitHub Pages (github.io)
+
+`docs/` holds a static build of the app for `https://<user>.github.io/biolex/`. GitHub Pages has no
+Python server, so the site uses `static/js/localapi.js`, which answers the same API in the browser
+from `data/seed.json`.
+
+One-time setup: **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / `/docs` → Save**.
+
+After changing the app or the terms, rebuild and push: `python tools/build_pages.py` (writes `docs/`).
+
 ## Tests
 
 ```bash

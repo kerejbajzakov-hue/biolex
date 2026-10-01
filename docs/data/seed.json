@@ -1,0 +1,777 @@
+{
+ "languages": [
+  {
+   "code": "en",
+   "name": "English"
+  },
+  {
+   "code": "kk",
+   "name": "Қазақша"
+  },
+  {
+   "code": "ru",
+   "name": "Русский"
+  }
+ ],
+ "themes": [
+  {
+   "slug": "genetics",
+   "icon": "dna",
+   "name": {
+    "en": "Genetics",
+    "kk": "Генетика",
+    "ru": "Генетика"
+   },
+   "description": {
+    "en": "Genes, heredity and how traits pass between generations.",
+    "kk": "Гендер, тұқым қуалаушылық және белгілердің ұрпақтан ұрпаққа берілуі.",
+    "ru": "Гены, наследственность и передача признаков из поколения в поколение."
+   }
+  },
+  {
+   "slug": "cell-biology",
+   "icon": "cell",
+   "name": {
+    "en": "Cell Biology",
+    "kk": "Жасуша биологиясы",
+    "ru": "Клеточная биология"
+   },
+   "description": {
+    "en": "The structure and work of cells and their organelles.",
+    "kk": "Жасушалар мен олардың органоидтарының құрылысы мен қызметі.",
+    "ru": "Строение и работа клеток и их органоидов."
+   }
+  },
+  {
+   "slug": "botany",
+   "icon": "leaf",
+   "name": {
+    "en": "Botany",
+    "kk": "Ботаника",
+    "ru": "Ботаника"
+   },
+   "description": {
+    "en": "Plants: their structure, growth and photosynthesis.",
+    "kk": "Өсімдіктер: құрылысы, өсуі және фотосинтез.",
+    "ru": "Растения: строение, рост и фотосинтез."
+   }
+  },
+  {
+   "slug": "biochemistry",
+   "icon": "molecule",
+   "name": {
+    "en": "Biochemistry",
+    "kk": "Биохимия",
+    "ru": "Биохимия"
+   },
+   "description": {
+    "en": "The molecules and chemical reactions of living things.",
+    "kk": "Тірі ағзалардың молекулалары мен химиялық реакциялары.",
+    "ru": "Молекулы и химические реакции живых организмов."
+   }
+  },
+  {
+   "slug": "microbiology",
+   "icon": "bacterium",
+   "name": {
+    "en": "Microbiology",
+    "kk": "Микробиология",
+    "ru": "Микробиология"
+   },
+   "description": {
+    "en": "Bacteria, viruses and other microorganisms.",
+    "kk": "Бактериялар, вирустар және басқа микроағзалар.",
+    "ru": "Бактерии, вирусы и другие микроорганизмы."
+   }
+  },
+  {
+   "slug": "ecology",
+   "icon": "sprout",
+   "name": {
+    "en": "Ecology",
+    "kk": "Экология",
+    "ru": "Экология"
+   },
+   "description": {
+    "en": "How organisms interact with each other and their environment.",
+    "kk": "Ағзалардың бір-бірімен және ортамен өзара әрекеттесуі.",
+    "ru": "Взаимодействие организмов друг с другом и со средой."
+   }
+  }
+ ],
+ "terms": [
+  {
+   "slug": "mitochondrion",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Mitochondrion",
+    "kk": "Митохондрия",
+    "ru": "Митохондрия"
+   },
+   "short": {
+    "en": "A double-membrane organelle that makes most of the cell’s ATP through cellular respiration.",
+    "kk": "Жасушалық тыныс алу арқылы жасушадағы АТФ-тің басым бөлігін түзетін қос мембраналы органоид.",
+    "ru": "Двумембранный органоид, вырабатывающий большую часть АТФ клетки в ходе клеточного дыхания."
+   },
+   "definition": {
+    "en": "A double-membrane organelle found in most eukaryotic cells. It produces most of the cell’s ATP through cellular respiration, which is why it is often called the “powerhouse of the cell”.",
+    "kk": "Эукариот жасушалардың көбінде кездесетін қос мембраналы органоид. Жасушалық тыныс алу арқылы жасушадағы АТФ-тің басым бөлігін түзеді, сондықтан оны жиі «жасушаның энергия станциясы» деп атайды.",
+    "ru": "Двумембранный органоид большинства эукариотических клеток. Вырабатывает основную часть АТФ клетки в ходе клеточного дыхания, поэтому её часто называют «энергетической станцией клетки»."
+   },
+   "pronunciation": {
+    "en": "/ˌmaɪ.təˈkɒn.dri.ən/",
+    "kk": "ми·то·хон·дри·я",
+    "ru": "ми·то·хо́н·дри·я"
+   },
+   "grammar": {
+    "en": "noun · plural: mitochondria",
+    "kk": "зат есім · көпше түрі: митохондриялар",
+    "ru": "сущ., ж. р. · мн. ч.: митохондрии"
+   },
+   "etymology": {
+    "en": "From Greek mitos “thread” + chondrion “little granule”.",
+    "kk": "Грек тілінен: mitos «жіп» + chondrion «түйіршік».",
+    "ru": "От греч. mitos «нить» + chondrion «зёрнышко»."
+   },
+   "facts": {
+    "en": [
+     "Bounded by two membranes; the inner one folds into cristae.",
+     "Makes ATP through the Krebs cycle and oxidative phosphorylation.",
+     "Carries its own small, circular DNA (mtDNA)."
+    ],
+    "kk": [
+     "Екі мембранамен қапталған; ішкі мембранасы қатпарланып, кристалар түзеді.",
+     "АТФ-ті Кребс циклі мен тотығу арқылы фосфорлану нәтижесінде түзеді.",
+     "Өзінің шағын, сақиналы ДНҚ-сы бар (мтДНҚ)."
+    ],
+    "ru": [
+     "Окружена двумя мембранами; внутренняя образует складки — кристы.",
+     "Синтезирует АТФ в цикле Кребса и при окислительном фосфорилировании.",
+     "Имеет собственную небольшую кольцевую ДНК (мтДНК)."
+    ]
+   },
+   "related": [
+    "atp",
+    "cristae",
+    "cellular-respiration",
+    "krebs-cycle",
+    "organelle",
+    "mitochondrial-dna"
+   ]
+  },
+  {
+   "slug": "mitosis",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Mitosis",
+    "kk": "Митоз",
+    "ru": "Митоз"
+   },
+   "short": {
+    "en": "Division of a nucleus into two genetically identical nuclei with the parent’s chromosome number.",
+    "kk": "Ядроның хромосома саны аналық ядромен бірдей, генетикалық тұрғыдан бірдей екі ядроға бөлінуі.",
+    "ru": "Деление ядра на два генетически идентичных ядра с тем же числом хромосом, что у материнского."
+   },
+   "related": [
+    "meiosis",
+    "mitotic-spindle",
+    "chromosome"
+   ]
+  },
+  {
+   "slug": "mitochondrial-dna",
+   "theme": "genetics",
+   "name": {
+    "en": "Mitochondrial DNA",
+    "kk": "Митохондриялық ДНҚ",
+    "ru": "Митохондриальная ДНК"
+   },
+   "short": {
+    "en": "The small circular genome inside mitochondria, inherited mainly from the mother in most animals.",
+    "kk": "Митохондриядағы шағын сақиналы геном; жануарлардың көбінде негізінен анадан беріледі.",
+    "ru": "Небольшой кольцевой геном митохондрий; у большинства животных наследуется в основном от матери."
+   }
+  },
+  {
+   "slug": "mitotic-spindle",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Mitotic spindle",
+    "kk": "Митоздық ұршық",
+    "ru": "Веретено деления"
+   },
+   "short": {
+    "en": "A structure of microtubules that pulls chromosomes apart during cell division.",
+    "kk": "Жасуша бөлінгенде хромосомаларды полюстерге ажырататын микротүтікшелер құрылымы.",
+    "ru": "Структура из микротрубочек, разводящая хромосомы к полюсам при делении клетки."
+   }
+  },
+  {
+   "slug": "mitochondrial-matrix",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Mitochondrial matrix",
+    "kk": "Митохондрия матриксі",
+    "ru": "Митохондриальный матрикс"
+   },
+   "short": {
+    "en": "The fluid inside the inner mitochondrial membrane, where the Krebs cycle takes place.",
+    "kk": "Митохондрияның ішкі мембранасы ішіндегі орта; мұнда Кребс циклі жүреді.",
+    "ru": "Внутреннее содержимое митохондрии за внутренней мембраной, где идёт цикл Кребса."
+   }
+  },
+  {
+   "slug": "meiosis",
+   "theme": "genetics",
+   "name": {
+    "en": "Meiosis",
+    "kk": "Мейоз",
+    "ru": "Мейоз"
+   },
+   "short": {
+    "en": "Cell division that halves the chromosome number, producing four genetically distinct gametes.",
+    "kk": "Хромосома санын екі есе азайтып, генетикалық әртүрлі төрт гамета түзетін жасуша бөлінуі.",
+    "ru": "Деление клетки, уменьшающее число хромосом вдвое и дающее четыре генетически разные гаметы."
+   },
+   "related": [
+    "mitosis",
+    "allele",
+    "chromosome"
+   ]
+  },
+  {
+   "slug": "allele",
+   "theme": "genetics",
+   "name": {
+    "en": "Allele",
+    "kk": "Аллель",
+    "ru": "Аллель"
+   },
+   "short": {
+    "en": "One of the alternative forms of a gene found at the same place on a chromosome.",
+    "kk": "Хромосоманың бір орнында орналасқан геннің баламалы түрлерінің бірі.",
+    "ru": "Один из альтернативных вариантов гена, расположенный в одном и том же участке хромосомы."
+   },
+   "related": [
+    "gene",
+    "dominant-allele",
+    "genotype",
+    "heterozygous",
+    "homozygous"
+   ]
+  },
+  {
+   "slug": "chlorophyll",
+   "theme": "botany",
+   "name": {
+    "en": "Chlorophyll",
+    "kk": "Хлорофилл",
+    "ru": "Хлорофилл"
+   },
+   "short": {
+    "en": "The green pigment in chloroplasts that absorbs light energy for photosynthesis.",
+    "kk": "Хлоропластардағы фотосинтезге қажет жарық энергиясын сіңіретін жасыл пигмент.",
+    "ru": "Зелёный пигмент хлоропластов, поглощающий энергию света для фотосинтеза."
+   },
+   "related": [
+    "photosynthesis"
+   ]
+  },
+  {
+   "slug": "photosynthesis",
+   "theme": "botany",
+   "name": {
+    "en": "Photosynthesis",
+    "kk": "Фотосинтез",
+    "ru": "Фотосинтез"
+   },
+   "short": {
+    "en": "The process by which plants turn light, water and carbon dioxide into glucose and oxygen.",
+    "kk": "Өсімдіктердің жарық, су және көмірқышқыл газынан глюкоза мен оттек түзу процесі.",
+    "ru": "Процесс, при котором растения образуют глюкозу и кислород из света, воды и углекислого газа."
+   },
+   "related": [
+    "chlorophyll",
+    "glucose",
+    "stoma",
+    "producer"
+   ]
+  },
+  {
+   "slug": "enzyme",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Enzyme",
+    "kk": "Фермент",
+    "ru": "Фермент"
+   },
+   "short": {
+    "en": "A protein that speeds up a chemical reaction without being used up.",
+    "kk": "Химиялық реакцияны өзі жұмсалмай жылдамдататын белок.",
+    "ru": "Белок, ускоряющий химическую реакцию и не расходующийся в ней."
+   },
+   "related": [
+    "protein"
+   ]
+  },
+  {
+   "slug": "atp",
+   "theme": "biochemistry",
+   "name": {
+    "en": "ATP",
+    "kk": "АТФ",
+    "ru": "АТФ"
+   },
+   "short": {
+    "en": "Adenosine triphosphate, the molecule cells use to store and transfer energy.",
+    "kk": "Аденозинтрифосфат — жасуша энергияны сақтап, тасымалдайтын молекула.",
+    "ru": "Аденозинтрифосфат — молекула, с помощью которой клетка запасает и переносит энергию."
+   },
+   "related": [
+    "mitochondrion",
+    "cellular-respiration",
+    "glucose"
+   ]
+  },
+  {
+   "slug": "ribosome",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Ribosome",
+    "kk": "Рибосома",
+    "ru": "Рибосома"
+   },
+   "short": {
+    "en": "The organelle that builds proteins by translating messenger RNA.",
+    "kk": "Ақпараттық РНҚ-ны трансляциялау арқылы белок түзетін органоид.",
+    "ru": "Органоид, синтезирующий белки путём трансляции матричной РНК."
+   },
+   "related": [
+    "protein",
+    "organelle",
+    "codon"
+   ]
+  },
+  {
+   "slug": "bacteriophage",
+   "theme": "microbiology",
+   "name": {
+    "en": "Bacteriophage",
+    "kk": "Бактериофаг",
+    "ru": "Бактериофаг"
+   },
+   "short": {
+    "en": "A virus that infects and replicates inside bacteria.",
+    "kk": "Бактерияларды зақымдап, солардың ішінде көбейетін вирус.",
+    "ru": "Вирус, поражающий бактерии и размножающийся внутри них."
+   },
+   "related": [
+    "virus",
+    "bacterium"
+   ]
+  },
+  {
+   "slug": "osmosis",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Osmosis",
+    "kk": "Осмос",
+    "ru": "Осмос"
+   },
+   "short": {
+    "en": "Movement of water across a partially permeable membrane toward the more concentrated solution.",
+    "kk": "Судың жартылай өткізгіш мембрана арқылы концентрациясы жоғары ерітіндіге қарай өтуі.",
+    "ru": "Перемещение воды через полупроницаемую мембрану в сторону более концентрированного раствора."
+   }
+  },
+  {
+   "slug": "ecosystem",
+   "theme": "ecology",
+   "name": {
+    "en": "Ecosystem",
+    "kk": "Экожүйе",
+    "ru": "Экосистема"
+   },
+   "short": {
+    "en": "A community of organisms interacting with each other and their physical environment.",
+    "kk": "Бір-бірімен және физикалық ортамен өзара әрекеттесетін ағзалар қауымдастығы.",
+    "ru": "Сообщество организмов, взаимодействующих друг с другом и с окружающей средой."
+   },
+   "related": [
+    "food-chain",
+    "producer",
+    "biodiversity"
+   ]
+  },
+  {
+   "slug": "chromosome",
+   "theme": "genetics",
+   "name": {
+    "en": "Chromosome",
+    "kk": "Хромосома",
+    "ru": "Хромосома"
+   },
+   "short": {
+    "en": "A thread-like structure of DNA and proteins that carries many genes.",
+    "kk": "Көптеген гені бар ДНҚ мен белоктан тұратын жіп тәрізді құрылым.",
+    "ru": "Нитевидная структура из ДНК и белков, несущая множество генов."
+   }
+  },
+  {
+   "slug": "codon",
+   "theme": "genetics",
+   "name": {
+    "en": "Codon",
+    "kk": "Кодон",
+    "ru": "Кодон"
+   },
+   "short": {
+    "en": "A sequence of three nucleotides that codes for one amino acid.",
+    "kk": "Бір аминқышқылын кодтайтын үш нуклеотидтен тұратын тізбек.",
+    "ru": "Последовательность из трёх нуклеотидов, кодирующая одну аминокислоту."
+   }
+  },
+  {
+   "slug": "dominant-allele",
+   "theme": "genetics",
+   "name": {
+    "en": "Dominant allele",
+    "kk": "Доминантты аллель",
+    "ru": "Доминантный аллель"
+   },
+   "short": {
+    "en": "An allele whose effect shows even when only one copy is present.",
+    "kk": "Бір ғана көшірмесі болса да әсері байқалатын аллель.",
+    "ru": "Аллель, который проявляется, даже если присутствует в одной копии."
+   }
+  },
+  {
+   "slug": "gene",
+   "theme": "genetics",
+   "name": {
+    "en": "Gene",
+    "kk": "Ген",
+    "ru": "Ген"
+   },
+   "short": {
+    "en": "A section of DNA that codes for a protein or functional RNA.",
+    "kk": "Белокты немесе қызметтік РНҚ-ны кодтайтын ДНҚ бөлігі.",
+    "ru": "Участок ДНК, кодирующий белок или функциональную РНК."
+   },
+   "related": [
+    "allele",
+    "chromosome",
+    "genome",
+    "codon"
+   ]
+  },
+  {
+   "slug": "genome",
+   "theme": "genetics",
+   "name": {
+    "en": "Genome",
+    "kk": "Геном",
+    "ru": "Геном"
+   },
+   "short": {
+    "en": "All the genetic material of an organism.",
+    "kk": "Ағзаның бүкіл генетикалық материалы.",
+    "ru": "Весь генетический материал организма."
+   }
+  },
+  {
+   "slug": "genotype",
+   "theme": "genetics",
+   "name": {
+    "en": "Genotype",
+    "kk": "Генотип",
+    "ru": "Генотип"
+   },
+   "short": {
+    "en": "The set of alleles an organism carries.",
+    "kk": "Ағзадағы аллельдер жиынтығы.",
+    "ru": "Совокупность аллелей организма."
+   },
+   "related": [
+    "phenotype",
+    "allele"
+   ]
+  },
+  {
+   "slug": "heterozygous",
+   "theme": "genetics",
+   "name": {
+    "en": "Heterozygous",
+    "kk": "Гетерозиготалы",
+    "ru": "Гетерозиготный"
+   },
+   "short": {
+    "en": "Having two different alleles of a gene.",
+    "kk": "Геннің екі түрлі аллелі бар.",
+    "ru": "Имеющий два разных аллеля одного гена."
+   }
+  },
+  {
+   "slug": "homozygous",
+   "theme": "genetics",
+   "name": {
+    "en": "Homozygous",
+    "kk": "Гомозиготалы",
+    "ru": "Гомозиготный"
+   },
+   "short": {
+    "en": "Having two identical alleles of a gene.",
+    "kk": "Геннің екі бірдей аллелі бар.",
+    "ru": "Имеющий два одинаковых аллеля одного гена."
+   }
+  },
+  {
+   "slug": "mutation",
+   "theme": "genetics",
+   "name": {
+    "en": "Mutation",
+    "kk": "Мутация",
+    "ru": "Мутация"
+   },
+   "short": {
+    "en": "A change in the sequence of bases in DNA.",
+    "kk": "ДНҚ нуклеотидтер тізбегінің өзгеруі.",
+    "ru": "Изменение последовательности нуклеотидов ДНК."
+   }
+  },
+  {
+   "slug": "phenotype",
+   "theme": "genetics",
+   "name": {
+    "en": "Phenotype",
+    "kk": "Фенотип",
+    "ru": "Фенотип"
+   },
+   "short": {
+    "en": "The observable traits of an organism.",
+    "kk": "Ағзаның байқалатын белгілері.",
+    "ru": "Наблюдаемые признаки организма."
+   },
+   "related": [
+    "genotype"
+   ]
+  },
+  {
+   "slug": "organelle",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Organelle",
+    "kk": "Органоид",
+    "ru": "Органоид"
+   },
+   "short": {
+    "en": "A specialised structure inside a cell with its own function.",
+    "kk": "Жасуша ішіндегі белгілі бір қызмет атқаратын арнайы құрылым.",
+    "ru": "Специализированная структура внутри клетки, выполняющая свою функцию."
+   }
+  },
+  {
+   "slug": "cristae",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Cristae",
+    "kk": "Кристалар",
+    "ru": "Кристы"
+   },
+   "short": {
+    "en": "Folds of the inner mitochondrial membrane.",
+    "kk": "Митохондрияның ішкі мембранасының қатпарлары.",
+    "ru": "Складки внутренней мембраны митохондрии."
+   }
+  },
+  {
+   "slug": "cellular-respiration",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Cellular respiration",
+    "kk": "Жасушалық тыныс алу",
+    "ru": "Клеточное дыхание"
+   },
+   "short": {
+    "en": "The breakdown of glucose in cells to release energy stored as ATP.",
+    "kk": "Жасушада глюкозаның ыдырап, энергияның АТФ түрінде бөлінуі.",
+    "ru": "Расщепление глюкозы в клетках с высвобождением энергии в виде АТФ."
+   },
+   "related": [
+    "mitochondrion",
+    "krebs-cycle",
+    "atp",
+    "glucose"
+   ]
+  },
+  {
+   "slug": "krebs-cycle",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Krebs cycle",
+    "kk": "Кребс циклі",
+    "ru": "Цикл Кребса"
+   },
+   "short": {
+    "en": "A cycle of reactions in the mitochondrial matrix that oxidises acetyl-CoA.",
+    "kk": "Митохондрия матриксінде ацетил-КоА-ны тотықтыратын реакциялар циклі.",
+    "ru": "Цикл реакций в матриксе митохондрий, окисляющий ацетил-КоА."
+   },
+   "related": [
+    "mitochondrial-matrix",
+    "cellular-respiration"
+   ]
+  },
+  {
+   "slug": "protein",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Protein",
+    "kk": "Белок",
+    "ru": "Белок"
+   },
+   "short": {
+    "en": "A large molecule made of one or more chains of amino acids.",
+    "kk": "Бір немесе бірнеше аминқышқылдар тізбегінен тұратын ірі молекула.",
+    "ru": "Крупная молекула из одной или нескольких цепей аминокислот."
+   }
+  },
+  {
+   "slug": "glucose",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Glucose",
+    "kk": "Глюкоза",
+    "ru": "Глюкоза"
+   },
+   "short": {
+    "en": "A simple sugar that is the main energy source for cells.",
+    "kk": "Жасушалардың негізгі энергия көзі болып табылатын жай қант.",
+    "ru": "Простой сахар — основной источник энергии для клеток."
+   }
+  },
+  {
+   "slug": "stoma",
+   "theme": "botany",
+   "name": {
+    "en": "Stoma",
+    "kk": "Лептесік",
+    "ru": "Устьице"
+   },
+   "short": {
+    "en": "A tiny pore in a leaf that lets gases in and out.",
+    "kk": "Жапырақтағы газ алмасуға мүмкіндік беретін ұсақ тесік.",
+    "ru": "Микроскопическая пора в листе, через которую идёт газообмен."
+   }
+  },
+  {
+   "slug": "xylem",
+   "theme": "botany",
+   "name": {
+    "en": "Xylem",
+    "kk": "Ксилема",
+    "ru": "Ксилема"
+   },
+   "short": {
+    "en": "Plant tissue that carries water and minerals up from the roots.",
+    "kk": "Суды және минералды заттарды тамырдан жоғары өткізетін өсімдік ұлпасы.",
+    "ru": "Ткань растения, проводящая воду и минеральные вещества от корней вверх."
+   }
+  },
+  {
+   "slug": "bacterium",
+   "theme": "microbiology",
+   "name": {
+    "en": "Bacterium",
+    "kk": "Бактерия",
+    "ru": "Бактерия"
+   },
+   "short": {
+    "en": "A single-celled prokaryotic organism without a nucleus.",
+    "kk": "Ядросы жоқ бір жасушалы прокариот ағза.",
+    "ru": "Одноклеточный прокариотический организм без ядра."
+   },
+   "related": [
+    "antibiotic",
+    "bacteriophage"
+   ]
+  },
+  {
+   "slug": "virus",
+   "theme": "microbiology",
+   "name": {
+    "en": "Virus",
+    "kk": "Вирус",
+    "ru": "Вирус"
+   },
+   "short": {
+    "en": "A non-cellular infectious agent that can reproduce only inside living cells.",
+    "kk": "Тек тірі жасушалар ішінде ғана көбейе алатын жасушасыз жұқпалы агент.",
+    "ru": "Неклеточный инфекционный агент, размножающийся только внутри живых клеток."
+   },
+   "related": [
+    "bacteriophage"
+   ]
+  },
+  {
+   "slug": "antibiotic",
+   "theme": "microbiology",
+   "name": {
+    "en": "Antibiotic",
+    "kk": "Антибиотик",
+    "ru": "Антибиотик"
+   },
+   "short": {
+    "en": "A substance that kills bacteria or stops their growth.",
+    "kk": "Бактерияларды жоятын немесе олардың өсуін тоқтататын зат.",
+    "ru": "Вещество, убивающее бактерии или подавляющее их рост."
+   }
+  },
+  {
+   "slug": "food-chain",
+   "theme": "ecology",
+   "name": {
+    "en": "Food chain",
+    "kk": "Қоректік тізбек",
+    "ru": "Пищевая цепь"
+   },
+   "short": {
+    "en": "A sequence showing how energy passes from one organism to another through feeding.",
+    "kk": "Энергияның қоректену арқылы бір ағзадан екіншісіне берілу реті.",
+    "ru": "Последовательность организмов, по которой энергия передаётся через питание."
+   },
+   "related": [
+    "producer",
+    "ecosystem"
+   ]
+  },
+  {
+   "slug": "producer",
+   "theme": "ecology",
+   "name": {
+    "en": "Producer",
+    "kk": "Продуцент",
+    "ru": "Продуцент"
+   },
+   "short": {
+    "en": "An organism that makes its own food, usually by photosynthesis.",
+    "kk": "Қоректік затты, әдетте фотосинтез арқылы, өзі түзетін ағза.",
+    "ru": "Организм, сам создающий органические вещества, обычно путём фотосинтеза."
+   }
+  },
+  {
+   "slug": "biodiversity",
+   "theme": "ecology",
+   "name": {
+    "en": "Biodiversity",
+    "kk": "Биоәртүрлілік",
+    "ru": "Биоразнообразие"
+   },
+   "short": {
+    "en": "The variety of living organisms in an area or on Earth.",
+    "kk": "Белгілі бір аумақтағы немесе Жердегі тірі ағзалардың алуан түрлілігі.",
+    "ru": "Разнообразие живых организмов на определённой территории или на Земле."
+   }
+  }
+ ]
+}

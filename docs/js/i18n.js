@@ -1,0 +1,85 @@
+// UI text in three languages. Dictionary content comes from the API.
+export const LANGS = [
+  { code: 'en', label: 'ENG', speech: 'en-GB' },
+  { code: 'kk', label: 'ҚАЗ', speech: 'kk-KZ' },
+  { code: 'ru', label: 'РУС', speech: 'ru-RU' },
+];
+
+export const STRINGS = {
+  en: {
+    language: 'Language', back: 'Back',
+    tabHome: 'Home', tabThemes: 'Themes', tabSaved: 'Saved', tabStats: 'Stats',
+    headline: 'Every biology term, one search away.',
+    sub: 'Clear definitions grouped by theme — from genetics and cells to plants and ecosystems.',
+    start: 'Get started',
+    hello: 'What are you\nlearning today?',
+    searchPh: 'Search biology terms…',
+    tod: 'Term of the day', more: 'Read more', seeAll: 'See all',
+    inDictionary: 'in the dictionary',
+    all: 'All',
+    none: 'No terms found', noneHint: 'Try a shorter word or another theme.',
+    definition: 'Definition', keyFacts: 'Key facts', origin: 'Word origin', related: 'Related terms',
+    save: 'Save term', unsave: 'Remove from saved', share: 'Share', listen: 'Play pronunciation',
+    savedToast: 'Saved', removedToast: 'Removed', copied: 'Link copied',
+    theme: 'Theme', searchIn: 'Search in this theme…',
+    savedTitle: 'Saved terms', savedEmpty: 'Nothing saved yet', savedEmptyHint: 'Tap the bookmark on any term to keep it here.',
+    statsTitle: 'Dictionary stats', byTheme: 'Terms by theme', byLanguage: 'Translated terms', fullArticles: 'with a full article',
+    error: 'Could not reach the server.', retry: 'Try again',
+    themesCount: (n) => n + (n === 1 ? ' theme' : ' themes'),
+    terms: (n) => n + (n === 1 ? ' term' : ' terms'),
+    results: (n) => n + (n === 1 ? ' result' : ' results'),
+  },
+  kk: {
+    language: 'Тіл', back: 'Артқа',
+    tabHome: 'Басты', tabThemes: 'Тақырыптар', tabSaved: 'Сақталған', tabStats: 'Статистика',
+    headline: 'Биологияның әр термині — бір іздеуде.',
+    sub: 'Тақырыптар бойынша топтастырылған түсінікті анықтамалар — генетика мен жасушадан өсімдіктер мен экожүйелерге дейін.',
+    start: 'Бастау',
+    hello: 'Бүгін не\nүйренеміз?',
+    searchPh: 'Биология терминін іздеу…',
+    tod: 'Күн термині', more: 'Толығырақ', seeAll: 'Барлығы',
+    inDictionary: 'сөздікте',
+    all: 'Барлығы',
+    none: 'Термин табылмады', noneHint: 'Қысқарақ сөз немесе басқа тақырып көріңіз.',
+    definition: 'Анықтама', keyFacts: 'Негізгі деректер', origin: 'Сөздің шығу тегі', related: 'Байланысты терминдер',
+    save: 'Терминді сақтау', unsave: 'Сақталғаннан алып тастау', share: 'Бөлісу', listen: 'Айтылуын тыңдау',
+    savedToast: 'Сақталды', removedToast: 'Алып тасталды', copied: 'Сілтеме көшірілді',
+    theme: 'Тақырып', searchIn: 'Осы тақырыптан іздеу…',
+    savedTitle: 'Сақталған терминдер', savedEmpty: 'Әзірге ештеңе сақталмаған', savedEmptyHint: 'Терминді осында сақтау үшін бетбелгіні басыңыз.',
+    statsTitle: 'Сөздік статистикасы', byTheme: 'Тақырыптар бойынша', byLanguage: 'Аударылған терминдер', fullArticles: 'толық мақаласы бар',
+    error: 'Серверге қосылу мүмкін болмады.', retry: 'Қайталау',
+    themesCount: (n) => n + ' тақырып',
+    terms: (n) => n + ' термин',
+    results: (n) => n + ' нәтиже',
+  },
+  ru: {
+    language: 'Язык', back: 'Назад',
+    tabHome: 'Главная', tabThemes: 'Темы', tabSaved: 'Избранное', tabStats: 'Статистика',
+    headline: 'Любой термин биологии — в одном поиске.',
+    sub: 'Понятные определения по темам — от генетики и клеток до растений и экосистем.',
+    start: 'Начать',
+    hello: 'Что изучаем\nсегодня?',
+    searchPh: 'Поиск по терминам биологии…',
+    tod: 'Термин дня', more: 'Подробнее', seeAll: 'Все',
+    inDictionary: 'в словаре',
+    all: 'Все',
+    none: 'Термины не найдены', noneHint: 'Попробуйте слово короче или другую тему.',
+    definition: 'Определение', keyFacts: 'Ключевые факты', origin: 'Происхождение слова', related: 'Связанные термины',
+    save: 'Сохранить термин', unsave: 'Убрать из избранного', share: 'Поделиться', listen: 'Прослушать произношение',
+    savedToast: 'Сохранено', removedToast: 'Удалено', copied: 'Ссылка скопирована',
+    theme: 'Тема', searchIn: 'Поиск в этой теме…',
+    savedTitle: 'Избранные термины', savedEmpty: 'Пока ничего нет', savedEmptyHint: 'Нажмите на закладку у термина, чтобы сохранить его здесь.',
+    statsTitle: 'Статистика словаря', byTheme: 'Термины по темам', byLanguage: 'Переведено терминов', fullArticles: 'с полной статьёй',
+    error: 'Не удалось связаться с сервером.', retry: 'Повторить',
+    themesCount: (n) => n + ' ' + ruPlural(n, 'тема', 'темы', 'тем'),
+    terms: (n) => n + ' ' + ruPlural(n, 'термин', 'термина', 'терминов'),
+    results: (n) => n + ' ' + ruPlural(n, 'результат', 'результата', 'результатов'),
+  },
+};
+
+function ruPlural(n, one, few, many) {
+  const m10 = n % 10, m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+}
