@@ -311,7 +311,10 @@
     "ru": "Белок, ускоряющий химическую реакцию и не расходующийся в ней."
    },
    "related": [
-    "protein"
+    "protein",
+    "substrate",
+    "active-site",
+    "catalyst"
    ]
   },
   {
@@ -771,6 +774,1724 @@
     "en": "The variety of living organisms in an area or on Earth.",
     "kk": "Белгілі бір аумақтағы немесе Жердегі тірі ағзалардың алуан түрлілігі.",
     "ru": "Разнообразие живых организмов на определённой территории или на Земле."
+   }
+  },
+  {
+   "slug": "dna",
+   "theme": "genetics",
+   "name": {
+    "en": "DNA",
+    "kk": "ДНҚ",
+    "ru": "ДНК"
+   },
+   "short": {
+    "en": "Deoxyribonucleic acid: the double-stranded molecule that stores genetic information.",
+    "kk": "Дезоксирибонуклеин қышқылы — генетикалық ақпаратты сақтайтын қос тізбекті молекула.",
+    "ru": "Дезоксирибонуклеиновая кислота — двухцепочечная молекула, хранящая генетическую информацию."
+   },
+   "related": [
+    "gene",
+    "nucleotide",
+    "replication",
+    "chromosome"
+   ]
+  },
+  {
+   "slug": "rna",
+   "theme": "genetics",
+   "name": {
+    "en": "RNA",
+    "kk": "РНҚ",
+    "ru": "РНК"
+   },
+   "short": {
+    "en": "Ribonucleic acid: a usually single-stranded molecule that helps turn genetic information into proteins.",
+    "kk": "Рибонуклеин қышқылы — генетикалық ақпаратты белокқа айналдыруға қатысатын, әдетте бір тізбекті молекула.",
+    "ru": "Рибонуклеиновая кислота — обычно одноцепочечная молекула, участвующая в синтезе белка по генетической информации."
+   },
+   "related": [
+    "transcription",
+    "translation",
+    "ribosome"
+   ]
+  },
+  {
+   "slug": "nucleotide",
+   "theme": "genetics",
+   "name": {
+    "en": "Nucleotide",
+    "kk": "Нуклеотид",
+    "ru": "Нуклеотид"
+   },
+   "short": {
+    "en": "A building block of DNA and RNA: a sugar, a phosphate group and a nitrogenous base.",
+    "kk": "ДНҚ мен РНҚ-ның құрылымдық бірлігі: қант, фосфат тобы және азотты негіз.",
+    "ru": "Мономер ДНК и РНК: сахар, фосфатная группа и азотистое основание."
+   }
+  },
+  {
+   "slug": "replication",
+   "theme": "genetics",
+   "name": {
+    "en": "Replication",
+    "kk": "Репликация",
+    "ru": "Репликация"
+   },
+   "short": {
+    "en": "Copying of a DNA molecule before cell division.",
+    "kk": "Жасуша бөлінер алдында ДНҚ молекуласының екі еселенуі.",
+    "ru": "Удвоение молекулы ДНК перед делением клетки."
+   }
+  },
+  {
+   "slug": "transcription",
+   "theme": "genetics",
+   "name": {
+    "en": "Transcription",
+    "kk": "Транскрипция",
+    "ru": "Транскрипция"
+   },
+   "short": {
+    "en": "Making an RNA copy of a gene from its DNA.",
+    "kk": "Геннің ДНҚ-сы негізінде РНҚ көшірмесін түзу.",
+    "ru": "Синтез РНК-копии гена на матрице ДНК."
+   },
+   "related": [
+    "translation",
+    "rna",
+    "gene"
+   ]
+  },
+  {
+   "slug": "translation",
+   "theme": "genetics",
+   "name": {
+    "en": "Translation",
+    "kk": "Трансляция",
+    "ru": "Трансляция"
+   },
+   "short": {
+    "en": "Building a protein on a ribosome using the code in messenger RNA.",
+    "kk": "Ақпараттық РНҚ кодына сай рибосомада белок түзу.",
+    "ru": "Синтез белка на рибосоме по коду матричной РНК."
+   },
+   "related": [
+    "ribosome",
+    "codon",
+    "amino-acid"
+   ]
+  },
+  {
+   "slug": "recessive-allele",
+   "theme": "genetics",
+   "name": {
+    "en": "Recessive allele",
+    "kk": "Рецессивті аллель",
+    "ru": "Рецессивный аллель"
+   },
+   "short": {
+    "en": "An allele that shows its effect only when two copies are present.",
+    "kk": "Әсері тек екі көшірмесі болғанда ғана байқалатын аллель.",
+    "ru": "Аллель, который проявляется только при наличии двух копий."
+   }
+  },
+  {
+   "slug": "karyotype",
+   "theme": "genetics",
+   "name": {
+    "en": "Karyotype",
+    "kk": "Кариотип",
+    "ru": "Кариотип"
+   },
+   "short": {
+    "en": "The complete set of chromosomes of a cell, described by number and appearance.",
+    "kk": "Жасушадағы хромосомалардың саны мен пішіні бойынша толық жиынтығы.",
+    "ru": "Полный набор хромосом клетки с их числом и строением."
+   }
+  },
+  {
+   "slug": "crossing-over",
+   "theme": "genetics",
+   "name": {
+    "en": "Crossing over",
+    "kk": "Кроссинговер",
+    "ru": "Кроссинговер"
+   },
+   "short": {
+    "en": "Exchange of sections between paired chromosomes during meiosis.",
+    "kk": "Мейоз кезінде жұп хромосомалардың бөліктерімен алмасуы.",
+    "ru": "Обмен участками между парными хромосомами в мейозе."
+   }
+  },
+  {
+   "slug": "heredity",
+   "theme": "genetics",
+   "name": {
+    "en": "Heredity",
+    "kk": "Тұқым қуалаушылық",
+    "ru": "Наследственность"
+   },
+   "short": {
+    "en": "The passing of traits from parents to offspring.",
+    "kk": "Белгілердің ата-анадан ұрпаққа берілуі.",
+    "ru": "Передача признаков от родителей потомкам."
+   }
+  },
+  {
+   "slug": "variation",
+   "theme": "genetics",
+   "name": {
+    "en": "Variation",
+    "kk": "Өзгергіштік",
+    "ru": "Изменчивость"
+   },
+   "short": {
+    "en": "Differences in traits between individuals of the same species.",
+    "kk": "Бір түр дараларының белгілері арасындағы айырмашылықтар.",
+    "ru": "Различия признаков у особей одного вида."
+   }
+  },
+  {
+   "slug": "chromatid",
+   "theme": "genetics",
+   "name": {
+    "en": "Chromatid",
+    "kk": "Хроматида",
+    "ru": "Хроматида"
+   },
+   "short": {
+    "en": "One of the two identical halves of a copied chromosome.",
+    "kk": "Екі еселенген хромосоманың екі бірдей жартысының бірі.",
+    "ru": "Одна из двух одинаковых половин удвоенной хромосомы."
+   }
+  },
+  {
+   "slug": "locus",
+   "theme": "genetics",
+   "name": {
+    "en": "Locus",
+    "kk": "Локус",
+    "ru": "Локус"
+   },
+   "short": {
+    "en": "The fixed position of a gene on a chromosome.",
+    "kk": "Геннің хромосомадағы тұрақты орны.",
+    "ru": "Определённое место гена в хромосоме."
+   }
+  },
+  {
+   "slug": "nucleus",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Nucleus",
+    "kk": "Ядро",
+    "ru": "Ядро"
+   },
+   "short": {
+    "en": "The membrane-bound organelle that holds a eukaryotic cell’s DNA.",
+    "kk": "Эукариот жасушасының ДНҚ-сы орналасқан мембранамен қоршалған органоид.",
+    "ru": "Окружённый мембраной органоид, где хранится ДНК эукариотической клетки."
+   },
+   "related": [
+    "chromosome",
+    "dna",
+    "eukaryote"
+   ]
+  },
+  {
+   "slug": "cell-membrane",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Cell membrane",
+    "kk": "Жасуша мембранасы",
+    "ru": "Клеточная мембрана"
+   },
+   "short": {
+    "en": "A thin lipid bilayer that surrounds the cell and controls what enters and leaves.",
+    "kk": "Жасушаны қоршап, заттардың кіруі мен шығуын реттейтін жұқа липидті қос қабат.",
+    "ru": "Тонкий липидный бислой, окружающий клетку и регулирующий вход и выход веществ."
+   }
+  },
+  {
+   "slug": "cytoplasm",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Cytoplasm",
+    "kk": "Цитоплазма",
+    "ru": "Цитоплазма"
+   },
+   "short": {
+    "en": "The jelly-like contents of a cell between the membrane and the nucleus.",
+    "kk": "Мембрана мен ядро арасындағы жасушаның қоймалжың ішкі ортасы.",
+    "ru": "Полужидкое содержимое клетки между мембраной и ядром."
+   }
+  },
+  {
+   "slug": "chloroplast",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Chloroplast",
+    "kk": "Хлоропласт",
+    "ru": "Хлоропласт"
+   },
+   "short": {
+    "en": "A plant-cell organelle where photosynthesis takes place.",
+    "kk": "Фотосинтез жүретін өсімдік жасушасының органоиды.",
+    "ru": "Органоид растительной клетки, в котором идёт фотосинтез."
+   },
+   "related": [
+    "photosynthesis",
+    "chlorophyll"
+   ]
+  },
+  {
+   "slug": "vacuole",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Vacuole",
+    "kk": "Вакуоль",
+    "ru": "Вакуоль"
+   },
+   "short": {
+    "en": "A membrane sac that stores water and substances; large in plant cells.",
+    "kk": "Су мен заттарды сақтайтын мембраналы қуыс; өсімдік жасушаларында ірі болады.",
+    "ru": "Мембранный пузырёк, запасающий воду и вещества; крупный в клетках растений."
+   }
+  },
+  {
+   "slug": "cell-wall",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Cell wall",
+    "kk": "Жасуша қабырғасы",
+    "ru": "Клеточная стенка"
+   },
+   "short": {
+    "en": "A rigid layer outside the membrane in plants, fungi and bacteria.",
+    "kk": "Өсімдіктер, саңырауқұлақтар мен бактерияларда мембрананың сыртындағы берік қабат.",
+    "ru": "Жёсткая оболочка снаружи мембраны у растений, грибов и бактерий."
+   }
+  },
+  {
+   "slug": "endoplasmic-reticulum",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Endoplasmic reticulum",
+    "kk": "Эндоплазмалық тор",
+    "ru": "Эндоплазматическая сеть"
+   },
+   "short": {
+    "en": "A network of membranes that makes and transports proteins and lipids.",
+    "kk": "Белоктар мен липидтерді түзіп, тасымалдайтын мембраналар жүйесі.",
+    "ru": "Система мембран, синтезирующая и транспортирующая белки и липиды."
+   }
+  },
+  {
+   "slug": "golgi-apparatus",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Golgi apparatus",
+    "kk": "Гольджи кешені",
+    "ru": "Аппарат Гольджи"
+   },
+   "short": {
+    "en": "An organelle that modifies, sorts and packages proteins for transport.",
+    "kk": "Белоктарды өзгертіп, сұрыптап, тасымалдауға буып-түйетін органоид.",
+    "ru": "Органоид, который модифицирует, сортирует и упаковывает белки для транспорта."
+   }
+  },
+  {
+   "slug": "lysosome",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Lysosome",
+    "kk": "Лизосома",
+    "ru": "Лизосома"
+   },
+   "short": {
+    "en": "A small organelle containing enzymes that break down waste and worn-out parts.",
+    "kk": "Қалдықтар мен тозған бөліктерді ыдырататын ферменттері бар ұсақ органоид.",
+    "ru": "Небольшой органоид с ферментами, расщепляющими отходы и старые структуры."
+   }
+  },
+  {
+   "slug": "cytoskeleton",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Cytoskeleton",
+    "kk": "Цитоқаңқа",
+    "ru": "Цитоскелет"
+   },
+   "short": {
+    "en": "A network of protein fibres that gives the cell its shape and helps it move.",
+    "kk": "Жасушаға пішін беріп, қозғалуына көмектесетін белок талшықтарының торы.",
+    "ru": "Сеть белковых волокон, придающая клетке форму и обеспечивающая движение."
+   }
+  },
+  {
+   "slug": "prokaryote",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Prokaryote",
+    "kk": "Прокариот",
+    "ru": "Прокариот"
+   },
+   "short": {
+    "en": "An organism whose cells have no nucleus, such as bacteria.",
+    "kk": "Жасушаларында ядросы жоқ ағза, мысалы бактериялар.",
+    "ru": "Организм, клетки которого не имеют ядра, например бактерии."
+   },
+   "related": [
+    "bacterium",
+    "eukaryote"
+   ]
+  },
+  {
+   "slug": "eukaryote",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Eukaryote",
+    "kk": "Эукариот",
+    "ru": "Эукариот"
+   },
+   "short": {
+    "en": "An organism whose cells have a nucleus and membrane-bound organelles.",
+    "kk": "Жасушаларында ядросы мен мембраналы органоидтары бар ағза.",
+    "ru": "Организм, клетки которого имеют ядро и мембранные органоиды."
+   },
+   "related": [
+    "prokaryote",
+    "nucleus"
+   ]
+  },
+  {
+   "slug": "diffusion",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Diffusion",
+    "kk": "Диффузия",
+    "ru": "Диффузия"
+   },
+   "short": {
+    "en": "Movement of particles from a higher to a lower concentration.",
+    "kk": "Бөлшектердің жоғары концентрациядан төменгі концентрацияға қарай қозғалуы.",
+    "ru": "Перемещение частиц из области высокой концентрации в область низкой."
+   }
+  },
+  {
+   "slug": "active-transport",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Active transport",
+    "kk": "Активті тасымалдау",
+    "ru": "Активный транспорт"
+   },
+   "short": {
+    "en": "Moving substances across a membrane against a concentration gradient, using energy.",
+    "kk": "Заттарды энергия жұмсап, концентрация градиентіне қарсы мембрана арқылы тасымалдау.",
+    "ru": "Перенос веществ через мембрану против градиента концентрации с затратой энергии."
+   }
+  },
+  {
+   "slug": "cell-cycle",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Cell cycle",
+    "kk": "Жасуша циклі",
+    "ru": "Клеточный цикл"
+   },
+   "short": {
+    "en": "The series of stages a cell goes through from one division to the next.",
+    "kk": "Жасушаның бір бөлінуден келесі бөлінуге дейінгі кезеңдері.",
+    "ru": "Последовательность этапов жизни клетки от одного деления до следующего."
+   }
+  },
+  {
+   "slug": "apoptosis",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Apoptosis",
+    "kk": "Апоптоз",
+    "ru": "Апоптоз"
+   },
+   "short": {
+    "en": "Programmed cell death that removes unneeded or damaged cells.",
+    "kk": "Қажетсіз немесе зақымданған жасушаларды жоятын бағдарламаланған жасуша өлімі.",
+    "ru": "Запрограммированная гибель клетки, удаляющая ненужные или повреждённые клетки."
+   }
+  },
+  {
+   "slug": "stem-cell",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Stem cell",
+    "kk": "Бағаналы жасуша",
+    "ru": "Стволовая клетка"
+   },
+   "short": {
+    "en": "An unspecialised cell that can divide and become different cell types.",
+    "kk": "Бөлініп, әртүрлі жасуша түрлеріне айнала алатын маманданбаған жасуша.",
+    "ru": "Неспециализированная клетка, способная делиться и превращаться в разные типы клеток."
+   }
+  },
+  {
+   "slug": "centriole",
+   "theme": "cell-biology",
+   "name": {
+    "en": "Centriole",
+    "kk": "Центриоль",
+    "ru": "Центриоль"
+   },
+   "short": {
+    "en": "A small cylinder of microtubules that helps organise cell division in animal cells.",
+    "kk": "Жануар жасушасының бөлінуін ұйымдастыруға қатысатын микротүтікшелерден тұратын шағын цилиндр.",
+    "ru": "Небольшой цилиндр из микротрубочек, участвующий в делении клеток животных."
+   }
+  },
+  {
+   "slug": "root",
+   "theme": "botany",
+   "name": {
+    "en": "Root",
+    "kk": "Тамыр",
+    "ru": "Корень"
+   },
+   "short": {
+    "en": "The plant organ that anchors it in the soil and absorbs water and minerals.",
+    "kk": "Өсімдікті топыраққа бекітіп, су мен минералды заттарды сіңіретін мүше.",
+    "ru": "Орган растения, закрепляющий его в почве и всасывающий воду и минеральные вещества."
+   }
+  },
+  {
+   "slug": "stem",
+   "theme": "botany",
+   "name": {
+    "en": "Stem",
+    "kk": "Сабақ",
+    "ru": "Стебель"
+   },
+   "short": {
+    "en": "The plant organ that supports the leaves and carries water and nutrients between roots and leaves.",
+    "kk": "Жапырақтарды ұстап, тамыр мен жапырақ арасында су мен қоректік заттарды өткізетін мүше.",
+    "ru": "Орган, несущий листья и проводящий воду и вещества между корнями и листьями."
+   }
+  },
+  {
+   "slug": "leaf",
+   "theme": "botany",
+   "name": {
+    "en": "Leaf",
+    "kk": "Жапырақ",
+    "ru": "Лист"
+   },
+   "short": {
+    "en": "The main organ of photosynthesis and gas exchange in plants.",
+    "kk": "Өсімдіктегі фотосинтез бен газ алмасудың негізгі мүшесі.",
+    "ru": "Основной орган фотосинтеза и газообмена у растений."
+   },
+   "related": [
+    "photosynthesis",
+    "stoma"
+   ]
+  },
+  {
+   "slug": "flower",
+   "theme": "botany",
+   "name": {
+    "en": "Flower",
+    "kk": "Гүл",
+    "ru": "Цветок"
+   },
+   "short": {
+    "en": "The reproductive organ of flowering plants.",
+    "kk": "Гүлді өсімдіктердің көбею мүшесі.",
+    "ru": "Орган размножения цветковых растений."
+   }
+  },
+  {
+   "slug": "seed",
+   "theme": "botany",
+   "name": {
+    "en": "Seed",
+    "kk": "Тұқым",
+    "ru": "Семя"
+   },
+   "short": {
+    "en": "A plant embryo with a food store inside a protective coat.",
+    "kk": "Қорғаныш қабықтың ішіндегі қор заты бар өсімдік ұрығы.",
+    "ru": "Зародыш растения с запасом питательных веществ в защитной кожуре."
+   }
+  },
+  {
+   "slug": "fruit",
+   "theme": "botany",
+   "name": {
+    "en": "Fruit",
+    "kk": "Жеміс",
+    "ru": "Плод"
+   },
+   "short": {
+    "en": "The ripened ovary of a flower that contains the seeds.",
+    "kk": "Гүлдің жетілген түйіні, ішінде тұқымдары болады.",
+    "ru": "Созревшая завязь цветка, содержащая семена."
+   }
+  },
+  {
+   "slug": "pollen",
+   "theme": "botany",
+   "name": {
+    "en": "Pollen",
+    "kk": "Тозаң",
+    "ru": "Пыльца"
+   },
+   "short": {
+    "en": "Tiny grains that carry the male sex cells of seed plants.",
+    "kk": "Тұқымды өсімдіктердің аталық жыныс жасушаларын тасымалдайтын ұсақ түйіршіктер.",
+    "ru": "Мелкие зёрна, содержащие мужские половые клетки семенных растений."
+   }
+  },
+  {
+   "slug": "pollination",
+   "theme": "botany",
+   "name": {
+    "en": "Pollination",
+    "kk": "Тозаңдану",
+    "ru": "Опыление"
+   },
+   "short": {
+    "en": "Transfer of pollen from a stamen to a stigma.",
+    "kk": "Тозаңның аталықтан аналықтың аузына түсуі.",
+    "ru": "Перенос пыльцы с тычинки на рыльце пестика."
+   },
+   "related": [
+    "pollen",
+    "stamen",
+    "pistil"
+   ]
+  },
+  {
+   "slug": "double-fertilization",
+   "theme": "botany",
+   "name": {
+    "en": "Double fertilization",
+    "kk": "Қос ұрықтану",
+    "ru": "Двойное оплодотворение"
+   },
+   "short": {
+    "en": "In flowering plants, one sperm fertilises the egg and another forms the endosperm.",
+    "kk": "Гүлді өсімдіктерде бір спермий жұмыртқа жасушаны ұрықтандырады, ал екіншісі эндосперм түзеді.",
+    "ru": "У цветковых растений один спермий оплодотворяет яйцеклетку, а второй образует эндосперм."
+   }
+  },
+  {
+   "slug": "germination",
+   "theme": "botany",
+   "name": {
+    "en": "Germination",
+    "kk": "Өну",
+    "ru": "Прорастание"
+   },
+   "short": {
+    "en": "The start of growth of a seed into a seedling.",
+    "kk": "Тұқымның өскінге айналып өсе бастауы.",
+    "ru": "Начало роста семени и превращения его в проросток."
+   }
+  },
+  {
+   "slug": "transpiration",
+   "theme": "botany",
+   "name": {
+    "en": "Transpiration",
+    "kk": "Транспирация",
+    "ru": "Транспирация"
+   },
+   "short": {
+    "en": "Evaporation of water from a plant, mainly through the stomata of its leaves.",
+    "kk": "Өсімдіктен, негізінен жапырақ лептесіктері арқылы, судың булануы.",
+    "ru": "Испарение воды растением, в основном через устьица листьев."
+   }
+  },
+  {
+   "slug": "phloem",
+   "theme": "botany",
+   "name": {
+    "en": "Phloem",
+    "kk": "Флоэма",
+    "ru": "Флоэма"
+   },
+   "short": {
+    "en": "Plant tissue that carries sugars from the leaves to other parts.",
+    "kk": "Жапырақтардан басқа мүшелерге қантты тасымалдайтын өсімдік ұлпасы.",
+    "ru": "Ткань растения, проводящая сахара от листьев к другим органам."
+   }
+  },
+  {
+   "slug": "stamen",
+   "theme": "botany",
+   "name": {
+    "en": "Stamen",
+    "kk": "Аталық",
+    "ru": "Тычинка"
+   },
+   "short": {
+    "en": "The male part of a flower that produces pollen.",
+    "kk": "Тозаң түзетін гүлдің аталық бөлігі.",
+    "ru": "Мужская часть цветка, образующая пыльцу."
+   },
+   "related": [
+    "pollen",
+    "pistil"
+   ]
+  },
+  {
+   "slug": "pistil",
+   "theme": "botany",
+   "name": {
+    "en": "Pistil",
+    "kk": "Аналық",
+    "ru": "Пестик"
+   },
+   "short": {
+    "en": "The female part of a flower: stigma, style and ovary.",
+    "kk": "Гүлдің аналық бөлігі: аузы, мойны және түйіні.",
+    "ru": "Женская часть цветка: рыльце, столбик и завязь."
+   }
+  },
+  {
+   "slug": "cambium",
+   "theme": "botany",
+   "name": {
+    "en": "Cambium",
+    "kk": "Камбий",
+    "ru": "Камбий"
+   },
+   "short": {
+    "en": "A layer of dividing cells that makes a stem or root grow thicker.",
+    "kk": "Сабақ пен тамырдың жуандап өсуін қамтамасыз ететін бөлінетін жасушалар қабаты.",
+    "ru": "Слой делящихся клеток, обеспечивающий рост стебля и корня в толщину."
+   }
+  },
+  {
+   "slug": "tropism",
+   "theme": "botany",
+   "name": {
+    "en": "Tropism",
+    "kk": "Тропизм",
+    "ru": "Тропизм"
+   },
+   "short": {
+    "en": "Growth of a plant toward or away from a stimulus such as light or gravity.",
+    "kk": "Өсімдіктің жарық немесе ауырлық күші сияқты тітіркендіргішке қарай не одан кері өсуі.",
+    "ru": "Ростовое движение растения к раздражителю или от него, например к свету."
+   }
+  },
+  {
+   "slug": "gymnosperms",
+   "theme": "botany",
+   "name": {
+    "en": "Gymnosperms",
+    "kk": "Ашық тұқымдылар",
+    "ru": "Голосеменные"
+   },
+   "short": {
+    "en": "Seed plants whose seeds are not enclosed in a fruit, such as pines.",
+    "kk": "Тұқымы жеміспен қапталмаған тұқымды өсімдіктер, мысалы қарағай.",
+    "ru": "Семенные растения, семена которых не заключены в плод, например сосна."
+   }
+  },
+  {
+   "slug": "angiosperms",
+   "theme": "botany",
+   "name": {
+    "en": "Angiosperms",
+    "kk": "Жабық тұқымдылар",
+    "ru": "Покрытосеменные"
+   },
+   "short": {
+    "en": "Flowering plants whose seeds develop inside a fruit.",
+    "kk": "Тұқымы жеміс ішінде дамитын гүлді өсімдіктер.",
+    "ru": "Цветковые растения, семена которых развиваются внутри плода."
+   }
+  },
+  {
+   "slug": "monocots",
+   "theme": "botany",
+   "name": {
+    "en": "Monocots",
+    "kk": "Дара жарнақтылар",
+    "ru": "Однодольные"
+   },
+   "short": {
+    "en": "Flowering plants with one seed leaf and usually parallel leaf veins.",
+    "kk": "Тұқымында бір жарнағы бар, жапырақ жүйкесі әдетте параллель гүлді өсімдіктер.",
+    "ru": "Цветковые растения с одной семядолей и обычно параллельным жилкованием листьев."
+   }
+  },
+  {
+   "slug": "dicots",
+   "theme": "botany",
+   "name": {
+    "en": "Dicots",
+    "kk": "Қос жарнақтылар",
+    "ru": "Двудольные"
+   },
+   "short": {
+    "en": "Flowering plants with two seed leaves and usually net-like leaf veins.",
+    "kk": "Тұқымында екі жарнағы бар, жапырақ жүйкесі әдетте торлы гүлді өсімдіктер.",
+    "ru": "Цветковые растения с двумя семядолями и обычно сетчатым жилкованием."
+   }
+  },
+  {
+   "slug": "spore",
+   "theme": "botany",
+   "name": {
+    "en": "Spore",
+    "kk": "Спора",
+    "ru": "Спора"
+   },
+   "short": {
+    "en": "A reproductive cell of fungi, mosses and ferns that can grow into a new organism.",
+    "kk": "Саңырауқұлақ, мүк және қырықжапырақтардың жаңа ағзаға өсе алатын көбею жасушасы.",
+    "ru": "Клетка размножения грибов, мхов и папоротников, из которой развивается новый организм."
+   }
+  },
+  {
+   "slug": "tuber",
+   "theme": "botany",
+   "name": {
+    "en": "Tuber",
+    "kk": "Түйнек",
+    "ru": "Клубень"
+   },
+   "short": {
+    "en": "A thickened underground stem that stores food, as in a potato.",
+    "kk": "Қор жинайтын жуандаған жерасты сабағы, мысалы картоп түйнегі.",
+    "ru": "Утолщённый подземный побег, запасающий питательные вещества, как у картофеля."
+   }
+  },
+  {
+   "slug": "amino-acid",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Amino acid",
+    "kk": "Аминқышқыл",
+    "ru": "Аминокислота"
+   },
+   "short": {
+    "en": "A small molecule that is the building block of proteins.",
+    "kk": "Белоктардың құрылымдық бірлігі болып табылатын шағын молекула.",
+    "ru": "Небольшая молекула — строительный блок белков."
+   },
+   "related": [
+    "protein",
+    "peptide-bond"
+   ]
+  },
+  {
+   "slug": "carbohydrate",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Carbohydrate",
+    "kk": "Көмірсу",
+    "ru": "Углевод"
+   },
+   "short": {
+    "en": "A sugar or sugar-based molecule that provides energy, such as starch.",
+    "kk": "Энергия беретін қант немесе қант негізіндегі молекула, мысалы крахмал.",
+    "ru": "Сахар или молекула на его основе, служащая источником энергии, например крахмал."
+   }
+  },
+  {
+   "slug": "lipid",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Lipid",
+    "kk": "Липид",
+    "ru": "Липид"
+   },
+   "short": {
+    "en": "A fat-like molecule that does not dissolve in water; it stores energy and builds membranes.",
+    "kk": "Суда ерімейтін, энергия қорлап, мембраналар түзетін май тәрізді молекула.",
+    "ru": "Жироподобное нерастворимое в воде вещество, запасающее энергию и образующее мембраны."
+   }
+  },
+  {
+   "slug": "nucleic-acid",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Nucleic acid",
+    "kk": "Нуклеин қышқылы",
+    "ru": "Нуклеиновая кислота"
+   },
+   "short": {
+    "en": "A long chain of nucleotides, such as DNA or RNA.",
+    "kk": "Нуклеотидтерден тұратын ұзын тізбек, мысалы ДНҚ немесе РНҚ.",
+    "ru": "Длинная цепь нуклеотидов, например ДНК или РНК."
+   }
+  },
+  {
+   "slug": "hormone",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Hormone",
+    "kk": "Гормон",
+    "ru": "Гормон"
+   },
+   "short": {
+    "en": "A chemical messenger carried in the blood that controls body processes.",
+    "kk": "Қанмен тасымалданып, ағзадағы процестерді реттейтін химиялық хабаршы.",
+    "ru": "Химический посредник, переносимый кровью и регулирующий процессы в организме."
+   }
+  },
+  {
+   "slug": "vitamin",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Vitamin",
+    "kk": "Дәрумен",
+    "ru": "Витамин"
+   },
+   "short": {
+    "en": "An organic substance needed in small amounts for the body to work normally.",
+    "kk": "Ағзаның қалыпты қызметі үшін аз мөлшерде қажет органикалық зат.",
+    "ru": "Органическое вещество, необходимое в малых количествах для нормальной работы организма."
+   }
+  },
+  {
+   "slug": "substrate",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Substrate",
+    "kk": "Субстрат",
+    "ru": "Субстрат"
+   },
+   "short": {
+    "en": "The molecule an enzyme acts on.",
+    "kk": "Фермент әсер ететін молекула.",
+    "ru": "Вещество, на которое действует фермент."
+   }
+  },
+  {
+   "slug": "active-site",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Active site",
+    "kk": "Белсенді орталық",
+    "ru": "Активный центр"
+   },
+   "short": {
+    "en": "The part of an enzyme where the substrate binds and reacts.",
+    "kk": "Ферменттің субстрат байланысып, реакция жүретін бөлігі.",
+    "ru": "Участок фермента, где связывается и превращается субстрат."
+   }
+  },
+  {
+   "slug": "catalyst",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Catalyst",
+    "kk": "Катализатор",
+    "ru": "Катализатор"
+   },
+   "short": {
+    "en": "A substance that speeds up a reaction without being used up.",
+    "kk": "Өзі жұмсалмай реакцияны жылдамдататын зат.",
+    "ru": "Вещество, ускоряющее реакцию и не расходующееся в ней."
+   }
+  },
+  {
+   "slug": "metabolism",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Metabolism",
+    "kk": "Зат алмасу",
+    "ru": "Обмен веществ"
+   },
+   "short": {
+    "en": "All the chemical reactions that take place in a living organism.",
+    "kk": "Тірі ағзада жүретін барлық химиялық реакциялар.",
+    "ru": "Совокупность всех химических реакций в живом организме."
+   }
+  },
+  {
+   "slug": "glycolysis",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Glycolysis",
+    "kk": "Гликолиз",
+    "ru": "Гликолиз"
+   },
+   "short": {
+    "en": "Breakdown of glucose into pyruvate in the cytoplasm, releasing a little ATP.",
+    "kk": "Цитоплазмада глюкозаның пируватқа дейін ыдырап, аздаған АТФ бөлінуі.",
+    "ru": "Расщепление глюкозы до пирувата в цитоплазме с образованием небольшого количества АТФ."
+   }
+  },
+  {
+   "slug": "fermentation",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Fermentation",
+    "kk": "Ашу",
+    "ru": "Брожение"
+   },
+   "short": {
+    "en": "Breakdown of sugars without oxygen, producing substances such as alcohol or lactic acid.",
+    "kk": "Қанттардың оттексіз ыдырап, спирт немесе сүт қышқылы сияқты заттар түзуі.",
+    "ru": "Бескислородное расщепление сахаров с образованием спирта, молочной кислоты и других веществ."
+   }
+  },
+  {
+   "slug": "insulin",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Insulin",
+    "kk": "Инсулин",
+    "ru": "Инсулин"
+   },
+   "short": {
+    "en": "A hormone made by the pancreas that lowers blood glucose.",
+    "kk": "Қандағы глюкоза деңгейін төмендететін ұйқы безінің гормоны.",
+    "ru": "Гормон поджелудочной железы, снижающий уровень глюкозы в крови."
+   }
+  },
+  {
+   "slug": "hemoglobin",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Hemoglobin",
+    "kk": "Гемоглобин",
+    "ru": "Гемоглобин"
+   },
+   "short": {
+    "en": "An iron-containing protein in red blood cells that carries oxygen.",
+    "kk": "Эритроциттердегі оттекті тасымалдайтын құрамында темірі бар белок.",
+    "ru": "Железосодержащий белок эритроцитов, переносящий кислород."
+   }
+  },
+  {
+   "slug": "cellulose",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Cellulose",
+    "kk": "Целлюлоза",
+    "ru": "Целлюлоза"
+   },
+   "short": {
+    "en": "A tough carbohydrate that forms plant cell walls.",
+    "kk": "Өсімдік жасушасының қабырғасын түзетін берік көмірсу.",
+    "ru": "Прочный углевод, из которого состоят клеточные стенки растений."
+   }
+  },
+  {
+   "slug": "starch",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Starch",
+    "kk": "Крахмал",
+    "ru": "Крахмал"
+   },
+   "short": {
+    "en": "The main storage carbohydrate of plants, made of glucose units.",
+    "kk": "Глюкоза қалдықтарынан тұратын өсімдіктердің негізгі қор көмірсуы.",
+    "ru": "Основной запасной углевод растений, состоящий из остатков глюкозы."
+   }
+  },
+  {
+   "slug": "glycogen",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Glycogen",
+    "kk": "Гликоген",
+    "ru": "Гликоген"
+   },
+   "short": {
+    "en": "The storage carbohydrate of animals, kept in the liver and muscles.",
+    "kk": "Бауыр мен бұлшықетте сақталатын жануарлардың қор көмірсуы.",
+    "ru": "Запасной углевод животных, хранящийся в печени и мышцах."
+   }
+  },
+  {
+   "slug": "peptide-bond",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Peptide bond",
+    "kk": "Пептидтік байланыс",
+    "ru": "Пептидная связь"
+   },
+   "short": {
+    "en": "The chemical bond that links amino acids in a protein.",
+    "kk": "Белоктағы аминқышқылдарды біріктіретін химиялық байланыс.",
+    "ru": "Химическая связь, соединяющая аминокислоты в белке."
+   }
+  },
+  {
+   "slug": "denaturation",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Denaturation",
+    "kk": "Денатурация",
+    "ru": "Денатурация"
+   },
+   "short": {
+    "en": "Loss of a protein’s shape, and so its function, because of heat or pH.",
+    "kk": "Қызу немесе pH әсерінен белоктың пішіні мен қызметін жоғалтуы.",
+    "ru": "Нарушение структуры белка, а значит и его функции, под действием температуры или pH."
+   }
+  },
+  {
+   "slug": "cholesterol",
+   "theme": "biochemistry",
+   "name": {
+    "en": "Cholesterol",
+    "kk": "Холестерин",
+    "ru": "Холестерин"
+   },
+   "short": {
+    "en": "A lipid found in animal cell membranes and used to make some hormones.",
+    "kk": "Жануар жасушасының мембранасында кездесетін, кейбір гормондар түзуге қажет липид.",
+    "ru": "Липид, входящий в мембраны клеток животных и служащий сырьём для некоторых гормонов."
+   }
+  },
+  {
+   "slug": "microorganism",
+   "theme": "microbiology",
+   "name": {
+    "en": "Microorganism",
+    "kk": "Микроағза",
+    "ru": "Микроорганизм"
+   },
+   "short": {
+    "en": "A living thing too small to see without a microscope.",
+    "kk": "Микроскопсыз көрінбейтін өте ұсақ тірі ағза.",
+    "ru": "Живой организм, который нельзя увидеть без микроскопа."
+   }
+  },
+  {
+   "slug": "archaea",
+   "theme": "microbiology",
+   "name": {
+    "en": "Archaea",
+    "kk": "Архейлер",
+    "ru": "Археи"
+   },
+   "short": {
+    "en": "Single-celled prokaryotes distinct from bacteria, often living in extreme places.",
+    "kk": "Бактериялардан ерекшеленетін, жиі қатал жағдайларда тіршілік ететін бір жасушалы прокариоттар.",
+    "ru": "Одноклеточные прокариоты, отличные от бактерий, часто живущие в экстремальных условиях."
+   }
+  },
+  {
+   "slug": "fungi",
+   "theme": "microbiology",
+   "name": {
+    "en": "Fungi",
+    "kk": "Саңырауқұлақтар",
+    "ru": "Грибы"
+   },
+   "short": {
+    "en": "A kingdom of organisms that feed by absorbing nutrients; it includes yeasts and moulds.",
+    "kk": "Қоректік заттарды сіңіру арқылы қоректенетін ағзалар патшалығы; оған ашытқылар мен зеңдер жатады.",
+    "ru": "Царство организмов, питающихся всасыванием веществ; включает дрожжи и плесневые грибы."
+   }
+  },
+  {
+   "slug": "yeast",
+   "theme": "microbiology",
+   "name": {
+    "en": "Yeast",
+    "kk": "Ашытқы",
+    "ru": "Дрожжи"
+   },
+   "short": {
+    "en": "Single-celled fungi used to make bread rise and to ferment drinks.",
+    "kk": "Нан ашыту және сусындарды ашыту үшін қолданылатын бір жасушалы саңырауқұлақтар.",
+    "ru": "Одноклеточные грибы, используемые в хлебопечении и для брожения напитков."
+   }
+  },
+  {
+   "slug": "mold",
+   "theme": "microbiology",
+   "name": {
+    "en": "Mold",
+    "kk": "Зең",
+    "ru": "Плесень"
+   },
+   "short": {
+    "en": "Fungi that grow as fuzzy threads on food and damp surfaces.",
+    "kk": "Тағамда және дымқыл беттерде түкті жіпше болып өсетін саңырауқұлақтар.",
+    "ru": "Грибы, растущие пушистыми нитями на продуктах и влажных поверхностях."
+   }
+  },
+  {
+   "slug": "protists",
+   "theme": "microbiology",
+   "name": {
+    "en": "Protists",
+    "kk": "Протистер",
+    "ru": "Протисты"
+   },
+   "short": {
+    "en": "Mostly single-celled eukaryotes that are not plants, animals or fungi, such as amoebas.",
+    "kk": "Өсімдікке, жануарға немесе саңырауқұлаққа жатпайтын, көбіне бір жасушалы эукариоттар, мысалы амеба.",
+    "ru": "В основном одноклеточные эукариоты, не относящиеся к растениям, животным и грибам, например амёбы."
+   }
+  },
+  {
+   "slug": "pathogen",
+   "theme": "microbiology",
+   "name": {
+    "en": "Pathogen",
+    "kk": "Патоген",
+    "ru": "Патоген"
+   },
+   "short": {
+    "en": "A microorganism or virus that causes disease.",
+    "kk": "Ауру тудыратын микроағза немесе вирус.",
+    "ru": "Микроорганизм или вирус, вызывающий болезнь."
+   }
+  },
+  {
+   "slug": "infection",
+   "theme": "microbiology",
+   "name": {
+    "en": "Infection",
+    "kk": "Инфекция",
+    "ru": "Инфекция"
+   },
+   "short": {
+    "en": "The entry and multiplication of a pathogen in the body.",
+    "kk": "Патогеннің ағзаға еніп, көбеюі.",
+    "ru": "Проникновение и размножение патогена в организме."
+   }
+  },
+  {
+   "slug": "vaccine",
+   "theme": "microbiology",
+   "name": {
+    "en": "Vaccine",
+    "kk": "Вакцина",
+    "ru": "Вакцина"
+   },
+   "short": {
+    "en": "A preparation that trains the immune system to recognise a pathogen without causing the disease.",
+    "kk": "Ауру тудырмай, иммундық жүйені патогенді тануға үйрететін препарат.",
+    "ru": "Препарат, который учит иммунную систему распознавать патоген, не вызывая болезни."
+   },
+   "related": [
+    "antigen",
+    "antibody",
+    "immunity"
+   ]
+  },
+  {
+   "slug": "antigen",
+   "theme": "microbiology",
+   "name": {
+    "en": "Antigen",
+    "kk": "Антиген",
+    "ru": "Антиген"
+   },
+   "short": {
+    "en": "A substance, often on a pathogen’s surface, that the immune system recognises.",
+    "kk": "Иммундық жүйе танитын, жиі патоген бетінде болатын зат.",
+    "ru": "Вещество, часто на поверхности патогена, которое распознаёт иммунная система."
+   }
+  },
+  {
+   "slug": "antibody",
+   "theme": "microbiology",
+   "name": {
+    "en": "Antibody",
+    "kk": "Антидене",
+    "ru": "Антитело"
+   },
+   "short": {
+    "en": "A Y-shaped protein made by white blood cells that binds to a specific antigen.",
+    "kk": "Лейкоциттер түзетін, белгілі бір антигенмен байланысатын Y пішінді белок.",
+    "ru": "Y-образный белок, вырабатываемый лейкоцитами и связывающий определённый антиген."
+   },
+   "related": [
+    "antigen",
+    "immunity"
+   ]
+  },
+  {
+   "slug": "immunity",
+   "theme": "microbiology",
+   "name": {
+    "en": "Immunity",
+    "kk": "Иммунитет",
+    "ru": "Иммунитет"
+   },
+   "short": {
+    "en": "The body’s ability to resist infection.",
+    "kk": "Ағзаның инфекцияға қарсы тұру қабілеті.",
+    "ru": "Способность организма противостоять инфекции."
+   }
+  },
+  {
+   "slug": "plasmid",
+   "theme": "microbiology",
+   "name": {
+    "en": "Plasmid",
+    "kk": "Плазмида",
+    "ru": "Плазмида"
+   },
+   "short": {
+    "en": "A small ring of DNA in bacteria, separate from the main chromosome.",
+    "kk": "Бактериялардағы негізгі хромосомадан бөлек шағын сақиналы ДНҚ.",
+    "ru": "Небольшая кольцевая молекула ДНК у бактерий, отдельная от основной хромосомы."
+   }
+  },
+  {
+   "slug": "binary-fission",
+   "theme": "microbiology",
+   "name": {
+    "en": "Binary fission",
+    "kk": "Екіге бөліну",
+    "ru": "Бинарное деление"
+   },
+   "short": {
+    "en": "Division of a bacterial cell into two identical cells.",
+    "kk": "Бактерия жасушасының екі бірдей жасушаға бөлінуі.",
+    "ru": "Деление бактериальной клетки на две одинаковые клетки."
+   }
+  },
+  {
+   "slug": "bacterial-colony",
+   "theme": "microbiology",
+   "name": {
+    "en": "Colony",
+    "kk": "Колония",
+    "ru": "Колония"
+   },
+   "short": {
+    "en": "A visible group of microorganisms grown from a single cell.",
+    "kk": "Бір жасушадан өсіп шыққан, көзге көрінетін микроағзалар тобы.",
+    "ru": "Видимая группа микроорганизмов, выросшая из одной клетки."
+   }
+  },
+  {
+   "slug": "coccus",
+   "theme": "microbiology",
+   "name": {
+    "en": "Coccus",
+    "kk": "Кокк",
+    "ru": "Кокк"
+   },
+   "short": {
+    "en": "A spherical bacterium.",
+    "kk": "Шар пішінді бактерия.",
+    "ru": "Бактерия шаровидной формы."
+   }
+  },
+  {
+   "slug": "bacillus",
+   "theme": "microbiology",
+   "name": {
+    "en": "Bacillus",
+    "kk": "Бацилла",
+    "ru": "Бацилла"
+   },
+   "short": {
+    "en": "A rod-shaped bacterium.",
+    "kk": "Таяқша пішінді бактерия.",
+    "ru": "Бактерия палочковидной формы."
+   }
+  },
+  {
+   "slug": "flagellum",
+   "theme": "microbiology",
+   "name": {
+    "en": "Flagellum",
+    "kk": "Талшық",
+    "ru": "Жгутик"
+   },
+   "short": {
+    "en": "A whip-like structure that a cell uses to swim.",
+    "kk": "Жасушаның жүзуіне қызмет ететін қамшы тәрізді құрылым.",
+    "ru": "Нитевидная структура, с помощью которой клетка плавает."
+   }
+  },
+  {
+   "slug": "toxin",
+   "theme": "microbiology",
+   "name": {
+    "en": "Toxin",
+    "kk": "Токсин",
+    "ru": "Токсин"
+   },
+   "short": {
+    "en": "A poisonous substance produced by a living organism.",
+    "kk": "Тірі ағза бөлетін улы зат.",
+    "ru": "Ядовитое вещество, вырабатываемое живым организмом."
+   }
+  },
+  {
+   "slug": "sterilization",
+   "theme": "microbiology",
+   "name": {
+    "en": "Sterilization",
+    "kk": "Стерилизация",
+    "ru": "Стерилизация"
+   },
+   "short": {
+    "en": "Killing all microorganisms on an object or in a substance.",
+    "kk": "Заттағы немесе зат бетіндегі барлық микроағзаларды жою.",
+    "ru": "Уничтожение всех микроорганизмов на предмете или в веществе."
+   }
+  },
+  {
+   "slug": "pasteurization",
+   "theme": "microbiology",
+   "name": {
+    "en": "Pasteurization",
+    "kk": "Пастерлеу",
+    "ru": "Пастеризация"
+   },
+   "short": {
+    "en": "Heating food or drink without boiling to kill most harmful microbes.",
+    "kk": "Тағамды немесе сусынды қайнатпай қыздырып, зиянды микробтардың көбін жою.",
+    "ru": "Нагревание продукта без кипячения для уничтожения большинства вредных микробов."
+   }
+  },
+  {
+   "slug": "microscope",
+   "theme": "microbiology",
+   "name": {
+    "en": "Microscope",
+    "kk": "Микроскоп",
+    "ru": "Микроскоп"
+   },
+   "short": {
+    "en": "An instrument that magnifies objects too small to see with the naked eye.",
+    "kk": "Жай көзбен көрінбейтін ұсақ заттарды үлкейтіп көрсететін құрал.",
+    "ru": "Прибор для увеличения объектов, невидимых невооружённым глазом."
+   }
+  },
+  {
+   "slug": "population",
+   "theme": "ecology",
+   "name": {
+    "en": "Population",
+    "kk": "Популяция",
+    "ru": "Популяция"
+   },
+   "short": {
+    "en": "All individuals of one species living in the same area.",
+    "kk": "Бір аумақта тіршілік ететін бір түрдің барлық даралары.",
+    "ru": "Совокупность особей одного вида, живущих на одной территории."
+   },
+   "related": [
+    "community",
+    "carrying-capacity"
+   ]
+  },
+  {
+   "slug": "community",
+   "theme": "ecology",
+   "name": {
+    "en": "Community",
+    "kk": "Қауымдастық",
+    "ru": "Сообщество"
+   },
+   "short": {
+    "en": "All the populations of different species living together in an area.",
+    "kk": "Бір аумақта бірге тіршілік ететін әртүрлі түрлердің популяциялары.",
+    "ru": "Совокупность популяций разных видов, обитающих вместе на одной территории."
+   }
+  },
+  {
+   "slug": "habitat",
+   "theme": "ecology",
+   "name": {
+    "en": "Habitat",
+    "kk": "Мекендеу ортасы",
+    "ru": "Среда обитания"
+   },
+   "short": {
+    "en": "The natural place where an organism lives.",
+    "kk": "Ағзаның табиғи тіршілік ететін орны.",
+    "ru": "Естественное место, где живёт организм."
+   }
+  },
+  {
+   "slug": "ecological-niche",
+   "theme": "ecology",
+   "name": {
+    "en": "Ecological niche",
+    "kk": "Экологиялық орын",
+    "ru": "Экологическая ниша"
+   },
+   "short": {
+    "en": "The role of a species in its ecosystem and the conditions it needs.",
+    "kk": "Түрдің экожүйедегі рөлі және оған қажетті жағдайлар.",
+    "ru": "Роль вида в экосистеме и необходимые ему условия."
+   }
+  },
+  {
+   "slug": "biome",
+   "theme": "ecology",
+   "name": {
+    "en": "Biome",
+    "kk": "Биом",
+    "ru": "Биом"
+   },
+   "short": {
+    "en": "A large region with a typical climate, plants and animals, such as a desert or tundra.",
+    "kk": "Шөл немесе тундра сияқты өзіне тән климаты, өсімдіктері мен жануарлары бар ірі аймақ.",
+    "ru": "Крупная природная зона с характерным климатом, растениями и животными, например пустыня или тундра."
+   }
+  },
+  {
+   "slug": "biosphere",
+   "theme": "ecology",
+   "name": {
+    "en": "Biosphere",
+    "kk": "Биосфера",
+    "ru": "Биосфера"
+   },
+   "short": {
+    "en": "The part of Earth where life exists.",
+    "kk": "Жердің тіршілік бар қабаты.",
+    "ru": "Оболочка Земли, населённая живыми организмами."
+   }
+  },
+  {
+   "slug": "food-web",
+   "theme": "ecology",
+   "name": {
+    "en": "Food web",
+    "kk": "Қоректік тор",
+    "ru": "Пищевая сеть"
+   },
+   "short": {
+    "en": "A network of connected food chains in an ecosystem.",
+    "kk": "Экожүйедегі бір-бірімен байланысқан қоректік тізбектер жүйесі.",
+    "ru": "Сеть взаимосвязанных пищевых цепей в экосистеме."
+   },
+   "related": [
+    "food-chain",
+    "trophic-level"
+   ]
+  },
+  {
+   "slug": "consumer",
+   "theme": "ecology",
+   "name": {
+    "en": "Consumer",
+    "kk": "Консумент",
+    "ru": "Консумент"
+   },
+   "short": {
+    "en": "An organism that gets energy by eating other organisms.",
+    "kk": "Басқа ағзалармен қоректену арқылы энергия алатын ағза.",
+    "ru": "Организм, получающий энергию, питаясь другими организмами."
+   }
+  },
+  {
+   "slug": "decomposer",
+   "theme": "ecology",
+   "name": {
+    "en": "Decomposer",
+    "kk": "Редуцент",
+    "ru": "Редуцент"
+   },
+   "short": {
+    "en": "An organism, such as a fungus or bacterium, that breaks down dead material.",
+    "kk": "Өлі органикалық заттарды ыдырататын ағза, мысалы саңырауқұлақ немесе бактерия.",
+    "ru": "Организм, разлагающий мёртвую органику, например гриб или бактерия."
+   }
+  },
+  {
+   "slug": "herbivore",
+   "theme": "ecology",
+   "name": {
+    "en": "Herbivore",
+    "kk": "Шөпқоректі жануар",
+    "ru": "Растительноядное животное"
+   },
+   "short": {
+    "en": "An animal that eats only plants.",
+    "kk": "Тек өсімдікпен қоректенетін жануар.",
+    "ru": "Животное, питающееся только растениями."
+   }
+  },
+  {
+   "slug": "carnivore",
+   "theme": "ecology",
+   "name": {
+    "en": "Carnivore",
+    "kk": "Етқоректі жануар",
+    "ru": "Плотоядное животное"
+   },
+   "short": {
+    "en": "An animal that eats other animals.",
+    "kk": "Басқа жануарлармен қоректенетін жануар.",
+    "ru": "Животное, питающееся другими животными."
+   }
+  },
+  {
+   "slug": "predator",
+   "theme": "ecology",
+   "name": {
+    "en": "Predator",
+    "kk": "Жыртқыш",
+    "ru": "Хищник"
+   },
+   "short": {
+    "en": "An animal that hunts and kills other animals for food.",
+    "kk": "Басқа жануарларды аулап, жеп қоректенетін жануар.",
+    "ru": "Животное, которое охотится на других животных и поедает их."
+   },
+   "related": [
+    "carnivore",
+    "food-chain"
+   ]
+  },
+  {
+   "slug": "symbiosis",
+   "theme": "ecology",
+   "name": {
+    "en": "Symbiosis",
+    "kk": "Симбиоз",
+    "ru": "Симбиоз"
+   },
+   "short": {
+    "en": "A close, long-term relationship between two different species.",
+    "kk": "Екі түрлі түрдің тығыз әрі ұзақ мерзімді қарым-қатынасы.",
+    "ru": "Тесное длительное сожительство организмов двух разных видов."
+   },
+   "related": [
+    "mutualism",
+    "parasitism"
+   ]
+  },
+  {
+   "slug": "mutualism",
+   "theme": "ecology",
+   "name": {
+    "en": "Mutualism",
+    "kk": "Мутуализм",
+    "ru": "Мутуализм"
+   },
+   "short": {
+    "en": "A relationship in which both species benefit.",
+    "kk": "Екі түр де пайда көретін қарым-қатынас.",
+    "ru": "Взаимовыгодные отношения двух видов."
+   }
+  },
+  {
+   "slug": "parasitism",
+   "theme": "ecology",
+   "name": {
+    "en": "Parasitism",
+    "kk": "Паразитизм",
+    "ru": "Паразитизм"
+   },
+   "short": {
+    "en": "A relationship in which one organism lives on or in another and harms it.",
+    "kk": "Бір ағза екіншісінің денесінде не ішінде тіршілік етіп, оған зиян келтіретін қарым-қатынас.",
+    "ru": "Отношения, при которых один организм живёт на другом или в нём и вредит ему."
+   }
+  },
+  {
+   "slug": "competition",
+   "theme": "ecology",
+   "name": {
+    "en": "Competition",
+    "kk": "Бәсекелестік",
+    "ru": "Конкуренция"
+   },
+   "short": {
+    "en": "Struggle between organisms for the same limited resources.",
+    "kk": "Ағзалардың шектеулі ресурстар үшін күресі.",
+    "ru": "Борьба организмов за одни и те же ограниченные ресурсы."
+   }
+  },
+  {
+   "slug": "carrying-capacity",
+   "theme": "ecology",
+   "name": {
+    "en": "Carrying capacity",
+    "kk": "Ортаның сыйымдылығы",
+    "ru": "Ёмкость среды"
+   },
+   "short": {
+    "en": "The largest population an environment can support in the long term.",
+    "kk": "Ортаның ұзақ уақыт бойы қамтамасыз ете алатын ең үлкен популяция мөлшері.",
+    "ru": "Максимальная численность популяции, которую среда может поддерживать длительное время."
+   }
+  },
+  {
+   "slug": "succession",
+   "theme": "ecology",
+   "name": {
+    "en": "Succession",
+    "kk": "Сукцессия",
+    "ru": "Сукцессия"
+   },
+   "short": {
+    "en": "The gradual replacement of communities in an area over time.",
+    "kk": "Бір аумақтағы қауымдастықтардың уақыт өте біртіндеп алмасуы.",
+    "ru": "Постепенная смена сообществ на одной территории с течением времени."
+   }
+  },
+  {
+   "slug": "trophic-level",
+   "theme": "ecology",
+   "name": {
+    "en": "Trophic level",
+    "kk": "Трофикалық деңгей",
+    "ru": "Трофический уровень"
+   },
+   "short": {
+    "en": "An organism’s position in a food chain.",
+    "kk": "Ағзаның қоректік тізбектегі орны.",
+    "ru": "Положение организма в пищевой цепи."
+   }
+  },
+  {
+   "slug": "carbon-cycle",
+   "theme": "ecology",
+   "name": {
+    "en": "Carbon cycle",
+    "kk": "Көміртек айналымы",
+    "ru": "Круговорот углерода"
+   },
+   "short": {
+    "en": "The movement of carbon between living things, the air, the oceans and rocks.",
+    "kk": "Көміртектің тірі ағзалар, ауа, мұхит пен тау жыныстары арасында айналуы.",
+    "ru": "Перемещение углерода между живыми организмами, атмосферой, океаном и горными породами."
+   }
+  },
+  {
+   "slug": "nitrogen-cycle",
+   "theme": "ecology",
+   "name": {
+    "en": "Nitrogen cycle",
+    "kk": "Азот айналымы",
+    "ru": "Круговорот азота"
+   },
+   "short": {
+    "en": "The movement of nitrogen between the air, the soil and living things.",
+    "kk": "Азоттың ауа, топырақ және тірі ағзалар арасында айналуы.",
+    "ru": "Перемещение азота между атмосферой, почвой и живыми организмами."
+   }
+  },
+  {
+   "slug": "endangered-species",
+   "theme": "ecology",
+   "name": {
+    "en": "Endangered species",
+    "kk": "Жойылып бара жатқан түр",
+    "ru": "Исчезающий вид"
+   },
+   "short": {
+    "en": "A species at risk of dying out.",
+    "kk": "Жойылып кету қаупі бар түр.",
+    "ru": "Вид, находящийся под угрозой исчезновения."
    }
   }
  ]

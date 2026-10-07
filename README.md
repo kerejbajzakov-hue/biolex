@@ -3,7 +3,7 @@
 A trilingual biology dictionary: **SQLite** database, **Python FastAPI** backend, and a web app
 in the BioLex design (claymorphism illustrations, glass and neumorphic UI, lime `#A7FC00` + violet `#6600FF`).
 
-The seed dictionary has **39 terms in 6 themes**, each translated into all 3 languages.
+The seed dictionary has **156 terms in 6 themes**, each translated into all 3 languages.
 
 ## Run it
 
