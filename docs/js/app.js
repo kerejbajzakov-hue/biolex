@@ -20,13 +20,17 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '
 // On GitHub Pages there is no server: the same API runs in the browser over data/seed.json.
 const STATIC_MODE = window.BIOLEX_STATIC === true;
 
-async function api(path, params = {}) {
-  if (STATIC_MODE) return localApi(path, { lang, ...params });
+async function api(path, params = {}, { method = 'GET', body = null } = {}) {
+  if (STATIC_MODE) return localApi(path, { lang, ...params }, { method, body });
   const url = new URL('/api' + path, location.origin);
   Object.entries({ lang, ...params }).forEach(([k, v]) => v != null && v !== '' && url.searchParams.set(k, v));
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(res.status);
-  return res.json();
+  const res = await fetch(url, body ? { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) } : { method });
+  if (!res.ok) {
+    const err = new Error(String(res.status));
+    err.status = res.status;
+    throw err;
+  }
+  return res.status === 204 ? null : res.json();
 }
 
 const ICON_PATHS = {
@@ -41,6 +45,9 @@ const ICON_PATHS = {
   share: '<path d="M12 4v11"/><path d="M8 8l4-4 4 4"/><path d="M5 13v6h14v-6"/>',
   arrow: '<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  edit: '<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M14 6l4 4"/>',
+  trash: '<path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/>',
 };
 const icon = (name, size = 20, fill = 'none') =>
   `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="${fill}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON_PATHS[name]}</svg>`;
@@ -72,7 +79,7 @@ const saveBtn = (slug) => `<button type="button" class="icon-btn neu ${isSaved(s
 function resultRow(item, compact = false) {
   return `<a class="result glass ${compact ? 'compact' : ''}" href="#/term/${encodeURIComponent(item.slug)}">
     <div class="body">
-      <div class="row between"><span class="title">${esc(item.name)}</span>${compact ? '' : `<span class="chip">${esc(item.theme.name)}</span>`}</div>
+      <div class="row between"><span class="title">${esc(item.name)}</span>${item.custom ? `<span class="chip lime">${esc(t().mine)}</span>` : compact ? '' : `<span class="chip">${esc(item.theme.name)}</span>`}</div>
       <span class="def">${esc(item.short_def)}</span>
     </div>${icon('chev', 18)}</a>`;
 }
@@ -128,7 +135,10 @@ async function home() {
     </div>
     <h1 class="display" style="white-space:pre-line">${esc(t().hello)}</h1>
     <a class="search-bar neu-in" href="#/search">${icon('search', 20).replace('currentColor', '#6600FF')}<span class="placeholder">${esc(t().searchPh)}</span><span class="go clay-violet">${icon('arrow', 18)}</span></a>
-    <div class="stat-pill glass"><b>${stats.total_terms}</b> ${esc(t().terms(stats.total_terms).replace(/^\d+\s*/, ''))} ${esc(t().inDictionary)} · ${esc(t().themesCount(stats.total_themes))}</div>
+    <div class="row" style="flex-wrap:wrap;gap:8px;margin-top:-4px">
+      <div class="stat-pill glass"><b>${stats.total_terms}</b> ${esc(t().terms(stats.total_terms).replace(/^\d+\s*/, ''))} ${esc(t().inDictionary)}</div>
+      <a class="add-pill clay-violet" href="#/add">${icon('plus', 16)} ${esc(t().addTerm)}</a>
+    </div>
     <a class="tod glass" href="#/term/${encodeURIComponent(today.slug)}">
       <div class="text">
         <span class="chip lime" style="align-self:flex-start">${esc(t().tod)}</span>
@@ -211,6 +221,12 @@ async function term(slug) {
       </div>
       <button type="button" class="speak clay-lime" data-action="speak" data-text="${esc(d.name)}" aria-label="${esc(t().listen)}">${icon('speaker', 22)}</button>
     </div>
+    ${d.custom ? `<div class="row" style="gap:10px;flex-wrap:wrap">
+      <span class="chip lime">${esc(t().mine)}</span>
+      <span style="flex:1"></span>
+      <a class="small-btn neu" href="#/edit/${encodeURIComponent(d.slug)}">${icon('edit', 16)} ${esc(t().edit)}</a>
+      <button type="button" class="small-btn neu danger" data-action="delete" data-slug="${esc(d.slug)}">${icon('trash', 16)} <span>${esc(t().del)}</span></button>
+    </div>` : ''}
     <section class="card glass"><span class="label">${esc(t().definition)}</span><p style="margin:0;font-size:15px;line-height:1.55;font-weight:500">${esc(d.definition)}</p></section>
     ${d.facts.length ? `<section class="card neu"><span class="label">${esc(t().keyFacts)}</span>${d.facts.map((f) => `<div class="fact">${esc(f)}</div>`).join('')}</section>` : ''}
     ${d.etymology ? `<section style="display:flex;flex-direction:column;gap:6px;padding:0 4px"><span class="label">${esc(t().origin)}</span><span class="muted" style="font-size:14px;line-height:1.5">${esc(d.etymology)}</span></section>` : ''}
@@ -262,12 +278,126 @@ async function themeDetail(slug) {
 }
 
 async function savedScreen() {
-  const items = saved.length ? await api('/terms/batch', { slugs: saved.join(',') }) : [];
+  const [mine, items] = await Promise.all([
+    api('/my-terms'),
+    saved.length ? api('/terms/batch', { slugs: saved.join(',') }) : Promise.resolve([]),
+  ]);
   setScreen(`
-    <div class="row between"><h1 class="display">${esc(t().savedTitle)}</h1>${langSwitch()}</div>
-    ${items.length ? `<div class="muted" style="font-size:13px;font-weight:700">${esc(t().terms(items.length))}</div><div class="list">${items.map((i) => resultRow(i)).join('')}</div>`
-      : emptyState(t().savedEmpty, t().savedEmptyHint, 'molecule')}`,
+    <div class="row between"><h1 class="display">${esc(t().tabSaved)}</h1>${langSwitch()}</div>
+    <section style="display:flex;flex-direction:column;gap:12px">
+      <div class="row between"><h2 class="display" style="font-size:17px;font-weight:700">${esc(t().myTerms)}</h2>
+        <a class="add-pill clay-violet" href="#/add">${icon('plus', 16)} ${esc(t().addTerm)}</a></div>
+      ${mine.length ? `<div class="list">${mine.map((i) => resultRow(i)).join('')}</div>`
+        : `<div class="card glass"><span class="muted" style="font-size:14px">${esc(t().myTermsEmpty)}</span></div>`}
+      ${STATIC_MODE ? `<span class="muted" style="font-size:12px;padding:0 4px">${esc(t().storedLocal)}</span>` : ''}
+    </section>
+    <section style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+      <h2 class="display" style="font-size:17px;font-weight:700">${esc(t().savedTitle)}</h2>
+      ${items.length ? `<div class="list">${items.map((i) => resultRow(i)).join('')}</div>`
+        : emptyState(t().savedEmpty, t().savedEmptyHint, 'molecule')}
+    </section>`,
   { tabs: 'tabSaved', orbList: [[180, 120, 260, '#6600FF'], [-90, 480, 240, '#A7FC00']] });
+}
+
+// ---------- add / edit your own term ----------
+const FORM_FIELDS = ['name', 'short_def', 'definition', 'pronunciation', 'facts', 'etymology'];
+let formState = null; // { key, slug, entry, theme, draft: {en: {...}, kk: {...}, ru: {...}}, related }
+
+const emptyDraft = () => Object.fromEntries(LANGS.map((l) => [l.code, Object.fromEntries(FORM_FIELDS.map((f) => [f, '']))]));
+const isFilled = (tr) => tr.name.trim() && tr.short_def.trim();
+const isEmpty = (tr) => FORM_FIELDS.every((f) => !tr[f].trim());
+
+function captureForm() {
+  const form = document.getElementById('term-form');
+  if (!form || !formState) return;
+  FORM_FIELDS.forEach((f) => { formState.draft[formState.entry][f] = form.elements[f].value; });
+  formState.theme = form.elements.theme.value;
+}
+
+async function termForm(slug = null) {
+  const key = slug ? 'edit:' + slug : 'add';
+  const themes = await api('/themes');
+  if (!formState || formState.key !== key) {
+    formState = { key, slug, entry: lang, theme: themes[0].slug, draft: emptyDraft(), related: [] };
+    if (slug) {
+      const src = await api('/terms/' + encodeURIComponent(slug) + '/source');
+      if (!src.custom) { location.hash = '#/term/' + encodeURIComponent(slug); return; }
+      formState.theme = src.theme;
+      formState.related = src.related;
+      for (const [l, tr] of Object.entries(src.translations)) {
+        formState.draft[l] = { name: tr.name || '', short_def: tr.short_def || '', definition: tr.definition || '',
+          pronunciation: tr.pronunciation || '', etymology: tr.etymology || '', facts: (tr.facts || []).join('\n') };
+      }
+      formState.entry = src.translations[lang] ? lang : Object.keys(src.translations)[0];
+    }
+  }
+  drawForm(themes);
+}
+
+function drawForm(themes) {
+  const f = formState, tr = f.draft[f.entry];
+  const back = f.slug ? '#/term/' + encodeURIComponent(f.slug) : '#/saved';
+  setScreen(`
+    <div class="row between">${backBtn(back)}${langSwitch()}</div>
+    <h1 class="display">${esc(f.slug ? t().editTerm : t().newTerm)}</h1>
+    <section class="card glass">
+      <span class="label">${esc(t().fieldLang)}</span>
+      <div class="lang-switch neu-in" style="align-self:flex-start" role="group" aria-label="${esc(t().fieldLang)}">${
+        LANGS.map((l) => `<button type="button" data-action="entry-lang" data-lang="${l.code}" aria-pressed="${l.code === f.entry}" class="${isFilled(f.draft[l.code]) ? 'filled' : ''}">${l.label}</button>`).join('')}</div>
+      <span class="muted" style="font-size:13px;line-height:1.4">${esc(t().fieldLangHint)}</span>
+    </section>
+    <form id="term-form" class="card neu term-form" novalidate>
+      <label class="field"><span>${esc(t().fName)} *</span><input name="name" maxlength="120" autocomplete="off" value="${esc(tr.name)}"></label>
+      <label class="field"><span>${esc(t().fTheme)} *</span><select name="theme">${themes.map((th) =>
+        `<option value="${th.slug}" ${th.slug === f.theme ? 'selected' : ''}>${esc(th.name)}</option>`).join('')}</select></label>
+      <label class="field"><span>${esc(t().fShort)} *</span><textarea name="short_def" rows="2" maxlength="400">${esc(tr.short_def)}</textarea></label>
+      <label class="field"><span>${esc(t().fDef)} <em>${esc(t().optional)}</em></span><textarea name="definition" rows="5" maxlength="4000">${esc(tr.definition)}</textarea></label>
+      <label class="field"><span>${esc(t().fPron)} <em>${esc(t().optional)}</em></span><input name="pronunciation" maxlength="120" autocomplete="off" value="${esc(tr.pronunciation)}"></label>
+      <label class="field"><span>${esc(t().fFacts)} <em>${esc(t().optional)}</em></span><textarea name="facts" rows="4">${esc(tr.facts)}</textarea></label>
+      <label class="field"><span>${esc(t().origin)} <em>${esc(t().optional)}</em></span><textarea name="etymology" rows="2" maxlength="600">${esc(tr.etymology)}</textarea></label>
+      <div id="form-error" class="form-error" role="alert"></div>
+      <button type="submit" class="cta clay-lime">${esc(t().saveBtn)}</button>
+      ${STATIC_MODE ? `<span class="muted" style="font-size:12px;text-align:center">${esc(t().storedLocal)}</span>` : ''}
+    </form>`, { orbList: [[170, 60, 260, '#6600FF'], [-100, 460, 260, '#A7FC00']] });
+  const form = document.getElementById('term-form');
+  form.addEventListener('submit', (e) => { e.preventDefault(); submitForm(); });
+  form.addEventListener('input', () => {
+    captureForm();
+    document.getElementById('form-error').textContent = '';
+    const btn = document.querySelector(`[data-action="entry-lang"][data-lang="${formState.entry}"]`);
+    if (btn) btn.classList.toggle('filled', !!isFilled(formState.draft[formState.entry]));
+  });
+}
+
+async function submitForm() {
+  captureForm();
+  const f = formState, errEl = document.getElementById('form-error');
+  const label = (code) => LANGS.find((l) => l.code === code).label;
+  const partial = LANGS.map((l) => l.code).find((c) => !isEmpty(f.draft[c]) && !isFilled(f.draft[c]));
+  if (partial) { errEl.textContent = t().needBoth(label(partial)); return; }
+  if (!LANGS.some((l) => isFilled(f.draft[l.code]))) { errEl.textContent = t().needName; return; }
+  const translations = {};
+  for (const { code } of LANGS) {
+    const tr = f.draft[code];
+    if (isEmpty(tr)) continue;
+    translations[code] = { name: tr.name.trim(), short_def: tr.short_def.trim(), definition: tr.definition.trim() || null,
+      pronunciation: tr.pronunciation.trim() || null, etymology: tr.etymology.trim() || null,
+      facts: tr.facts.split('\n').map((x) => x.trim()).filter(Boolean) };
+  }
+  const body = { theme: f.theme, translations, related: f.related };
+  const btn = document.querySelector('#term-form button[type=submit]');
+  btn.disabled = true;
+  try {
+    const res = f.slug
+      ? await api('/terms/' + encodeURIComponent(f.slug), {}, { method: 'PUT', body })
+      : await api('/terms', {}, { method: 'POST', body });
+    toast(f.slug ? t().updated : t().created);
+    formState = null;
+    location.hash = '#/term/' + encodeURIComponent(res.slug);
+  } catch (err) {
+    errEl.textContent = err.status === 422 ? t().needName : t().error;
+    btn.disabled = false;
+  }
 }
 
 async function statsScreen() {
@@ -278,7 +408,7 @@ async function statsScreen() {
     <section class="card glass" style="align-items:flex-start">
       <span class="big-number">${s.total_terms}</span>
       <span style="font-weight:700">${esc(t().terms(s.total_terms).replace(/^\d+\s*/, ''))} ${esc(t().inDictionary)} · ${esc(t().themesCount(s.total_themes))}</span>
-      <span class="muted" style="font-size:13px">${s.terms_with_full_article} ${esc(t().fullArticles)}</span>
+      <span class="muted" style="font-size:13px">${s.terms_with_full_article} ${esc(t().fullArticles)}${s.custom_terms ? ' · ' + esc(t().customCount(s.custom_terms)) : ''}</span>
     </section>
     <section class="card neu"><span class="label">${esc(t().byTheme)}</span>
       ${s.by_theme.map((x) => `<a href="#/theme/${x.slug}" style="display:flex;flex-direction:column;gap:6px">
@@ -307,6 +437,8 @@ async function route() {
       case 'themes': return await themesList();
       case 'theme': return await themeDetail(parts[1]);
       case 'saved': return await savedScreen();
+      case 'add': return await termForm();
+      case 'edit': return await termForm(decodeURIComponent(parts[1] || ''));
       case 'stats': return await statsScreen();
       default: location.hash = '#/';
     }
@@ -322,6 +454,7 @@ document.addEventListener('click', (e) => {
   if (!el) return;
   const action = el.dataset.action;
   if (action === 'lang') {
+    captureForm();
     lang = el.dataset.lang;
     store.set('biolex-lang', lang);
     const q = document.getElementById('q');
@@ -358,6 +491,24 @@ document.addEventListener('click', (e) => {
     else navigator.clipboard?.writeText(location.href).then(() => toast(t().copied));
   } else if (action === 'retry') {
     route();
+  } else if (action === 'entry-lang') {
+    captureForm();
+    formState.entry = el.dataset.lang;
+    api('/themes').then(drawForm);
+  } else if (action === 'delete') {
+    const slug = el.dataset.slug;
+    if (el.dataset.armed !== '1') {
+      el.dataset.armed = '1';
+      el.querySelector('span').textContent = t().confirmDel;
+      setTimeout(() => { if (el.isConnected) { el.dataset.armed = ''; el.querySelector('span').textContent = t().del; } }, 3000);
+      return;
+    }
+    api('/terms/' + encodeURIComponent(slug), {}, { method: 'DELETE' }).then(() => {
+      saved = saved.filter((x) => x !== slug);
+      store.set('biolex-saved', saved);
+      toast(t().deleted);
+      location.hash = '#/saved';
+    }).catch(() => toast(t().error));
   }
 });
 

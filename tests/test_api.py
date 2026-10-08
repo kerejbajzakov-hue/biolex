@@ -70,3 +70,54 @@ def test_batch_keeps_order(client):
 def test_today_and_frontend(client):
     assert client.get("/api/terms/today?lang=ru").status_code == 200
     assert "BioLex" in client.get("/").text
+
+
+# ---------- user terms ----------
+
+NEW_TERM = {
+    "theme": "botany",
+    "translations": {
+        "ru": {"name": "Мой лишайник", "short_def": "Симбиоз гриба и водоросли.",
+               "definition": "Длинное описание.", "facts": ["Растёт медленно", "  "]},
+        "en": {"name": "", "short_def": ""},
+    },
+    "related": ["symbiosis"],
+}
+
+
+def test_create_edit_delete_user_term(client):
+    before = client.get("/api/stats").json()["total_terms"]
+    r = client.post("/api/terms?lang=ru", json=NEW_TERM)
+    assert r.status_code == 201, r.text
+    t = r.json()
+    slug = t["slug"]
+    assert t["custom"] and t["name"] == "Мой лишайник" and t["facts"] == ["Растёт медленно"]
+    assert t["related"][0]["slug"] == "symbiosis"
+    # shown in other languages too (falls back to the language it was written in)
+    assert client.get(f"/api/terms/{slug}?lang=kk").json()["name"] == "Мой лишайник"
+    # searchable and counted
+    assert client.get("/api/terms", params={"lang": "en", "q": "лишайн"}).json()["items"][0]["slug"] == slug
+    s = client.get("/api/stats").json()
+    assert s["total_terms"] == before + 1 and s["custom_terms"] >= 1
+    assert slug in [x["slug"] for x in client.get("/api/my-terms").json()]
+
+    # edit: add an English version and change the theme
+    body = {"theme": "ecology", "translations": {
+        "ru": {"name": "Лишайник", "short_def": "Симбиоз гриба и водоросли."},
+        "en": {"name": "Lichen", "short_def": "A partnership of a fungus and an alga."}}}
+    r = client.put(f"/api/terms/{slug}?lang=en", json=body)
+    assert r.status_code == 200, r.text
+    assert r.json()["name"] == "Lichen" and r.json()["theme"]["slug"] == "ecology"
+    src = client.get(f"/api/terms/{slug}/source").json()
+    assert set(src["translations"]) == {"ru", "en"}
+
+    assert client.delete(f"/api/terms/{slug}").status_code == 204
+    assert client.get(f"/api/terms/{slug}").status_code == 404
+
+
+def test_user_term_validation_and_builtin_protection(client):
+    bad = {"theme": "botany", "translations": {"ru": {"name": "Без определения", "short_def": ""}}}
+    assert client.post("/api/terms", json=bad).status_code == 422
+    assert client.post("/api/terms", json={"theme": "nope", "translations": {"en": {"name": "X", "short_def": "Y"}}}).status_code == 422
+    assert client.put("/api/terms/mitochondrion", json=NEW_TERM).status_code == 403
+    assert client.delete("/api/terms/mitochondrion").status_code == 403

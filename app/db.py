@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS terms (
     id         INTEGER PRIMARY KEY,
     slug       TEXT NOT NULL UNIQUE,
     theme_id   INTEGER NOT NULL REFERENCES themes(id),
+    is_custom  INTEGER NOT NULL DEFAULT 0,   -- 1 = added by a user in the app
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE INDEX IF NOT EXISTS idx_terms_theme ON terms(theme_id);
@@ -86,4 +87,8 @@ def connect(path: str | Path | None = None) -> sqlite3.Connection:
 
 def init_db(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA)
+    # databases created before user terms existed get the new column
+    cols = {r["name"] for r in conn.execute("PRAGMA table_info(terms)")}
+    if "is_custom" not in cols:
+        conn.execute("ALTER TABLE terms ADD COLUMN is_custom INTEGER NOT NULL DEFAULT 0")
     conn.commit()

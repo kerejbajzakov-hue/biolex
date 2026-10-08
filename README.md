@@ -67,6 +67,11 @@ Missing translations fall back to English automatically.
 | GET | `/api/terms/{slug}?lang=` | full article with facts and related terms |
 | GET | `/api/terms/today?lang=` | term of the day |
 | GET | `/api/terms/batch?slugs=a,b` | several terms (used by Saved) |
+| POST | `/api/terms` | add your own term (one, two or all three languages) |
+| GET | `/api/terms/{slug}/source` | all languages of a term as entered (edit form) |
+| PUT | `/api/terms/{slug}` | edit your own term (built-in terms are read-only → 403) |
+| DELETE | `/api/terms/{slug}` | delete your own term |
+| GET | `/api/my-terms?lang=` | the terms users added |
 
 `lang` is `en`, `kk` or `ru`.
 
@@ -117,5 +122,8 @@ pytest
 - Live search with theme filters
 - Term page: pronunciation (spoken with the browser's speech engine), definition, key facts, word origin, related terms
 - Themes with A–Z lists in each language's own alphabet (Kazakh letters Ә, Қ, Ң… in their real place)
+- **Your own terms:** add a term with a theme, short definition, full description, pronunciation, key facts and word origin —
+  in one language or all three; edit or delete it later. They appear in search, themes and stats like built-in terms.
+  With the FastAPI server they are stored in SQLite (`terms.is_custom = 1`); on GitHub Pages they are stored in the browser.
 - Saved terms (stored on the device), Stats tab with term counts
 - Works on phones and installs as a web app (manifest included)

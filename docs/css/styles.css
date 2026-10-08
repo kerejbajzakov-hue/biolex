@@ -201,3 +201,33 @@ h1.display { font-size: 26px; font-weight: 700; line-height: 1.15; }
 .skeleton { height: 76px; border-radius: 22px; background: rgba(255,255,255,0.35); animation: pulse 1.2s infinite ease-in-out; }
 @keyframes pulse { 50% { opacity: 0.5; } }
 :focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
+
+/* add / edit your own term */
+.add-pill {
+  display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; border-radius: 17px;
+  font-size: 13px; font-weight: 800; white-space: nowrap;
+}
+.small-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 14px; border-radius: 19px; border: 0;
+  cursor: pointer; font-size: 13px; font-weight: 800; color: var(--ink);
+}
+.small-btn.danger { color: #B3261E; }
+.small-btn.danger[data-armed="1"] { background: #B3261E; color: #fff; box-shadow: none; }
+.term-form { gap: 14px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field > span { font-size: 13px; font-weight: 800; }
+.field em { font-style: normal; font-weight: 600; color: var(--muted); }
+.field input, .field textarea, .field select {
+  width: 100%; border: 0; border-radius: 16px; padding: 12px 14px; font: inherit; font-size: 15px; color: var(--ink);
+  background: var(--ground-in); box-shadow: inset 4px 4px 9px #CFC9DD, inset -4px -4px 9px #FFFFFF; resize: vertical;
+}
+.field select { appearance: none; cursor: pointer; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: 2px solid var(--violet); outline-offset: 1px; }
+.form-error { color: #B3261E; font-size: 13px; font-weight: 700; min-height: 1em; }
+.form-error:empty { display: none; }
+.cta:disabled { opacity: 0.6; cursor: default; }
+.lang-switch button.filled { position: relative; }
+.lang-switch button.filled::after {
+  content: ""; position: absolute; top: 5px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--violet);
+}
+.lang-switch button.filled[aria-pressed="true"]::after { background: var(--ink); }

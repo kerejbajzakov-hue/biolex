@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from . import db, repository as repo
-from .schemas import Language, Stats, TermDetail, TermList, TermSummary, Theme
+from .schemas import Language, Stats, TermDetail, TermIn, TermList, TermSource, TermSummary, Theme
 from .seed import seed_if_empty
 
 Lang = Literal["en", "kk", "ru"]
@@ -38,7 +38,7 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
         description="Trilingual (English / Қазақша / Русский) biology dictionary.",
         lifespan=lifespan,
     )
-    app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET"], allow_headers=["*"])
+    app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET", "POST", "PUT", "DELETE"], allow_headers=["*"])
 
     def get_conn() -> Iterator[sqlite3.Connection]:
         conn = db.connect(path)
@@ -101,6 +101,56 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
         if not found:
             raise HTTPException(404, "Term not found")
         return found
+
+    # ---------- user terms ----------
+
+    def _payload(body: TermIn) -> dict:
+        return {
+            "theme": body.theme,
+            "translations": {lang: tr.model_dump() for lang, tr in body.translations.items()},
+            "related": body.related,
+        }
+
+    @app.post("/api/terms", response_model=TermDetail, status_code=201, tags=["my terms"])
+    def create_term(body: TermIn, lang: Lang = "en", conn=Depends(get_conn)):
+        """Add your own term (in one, two or all three languages)."""
+        try:
+            slug = repo.create_term(conn, _payload(body))
+        except ValueError as e:
+            raise HTTPException(422, str(e))
+        return repo.get_term(conn, slug, lang)
+
+    @app.get("/api/terms/{slug}/source", response_model=TermSource, tags=["my terms"])
+    def term_source(slug: str, conn=Depends(get_conn)):
+        """All languages of a term as entered — used by the edit form."""
+        found = repo.get_term_source(conn, slug)
+        if not found:
+            raise HTTPException(404, "Term not found")
+        return found
+
+    @app.put("/api/terms/{slug}", response_model=TermDetail, tags=["my terms"])
+    def update_term(slug: str, body: TermIn, lang: Lang = "en", conn=Depends(get_conn)):
+        try:
+            if not repo.update_term(conn, slug, _payload(body)):
+                raise HTTPException(404, "Term not found")
+        except repo.NotEditable:
+            raise HTTPException(403, "Built-in dictionary terms can't be changed")
+        except ValueError as e:
+            raise HTTPException(422, str(e))
+        return repo.get_term(conn, slug, lang)
+
+    @app.delete("/api/terms/{slug}", status_code=204, tags=["my terms"])
+    def delete_term(slug: str, conn=Depends(get_conn)):
+        try:
+            if not repo.delete_term(conn, slug):
+                raise HTTPException(404, "Term not found")
+        except repo.NotEditable:
+            raise HTTPException(403, "Built-in dictionary terms can't be deleted")
+
+    @app.get("/api/my-terms", response_model=list[TermSummary], tags=["my terms"])
+    def my_terms(lang: Lang = "en", conn=Depends(get_conn)):
+        slugs = [r["slug"] for r in conn.execute("SELECT slug FROM terms WHERE is_custom = 1 ORDER BY id DESC")]
+        return repo.terms_by_slugs(conn, lang, slugs)
 
     # The web app (index.html + assets) is served from /
     app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="web")
